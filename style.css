@@ -1,0 +1,92 @@
+/* llamando una hoja de estilos externa
+   @import son una mala practica ya que es una instruccion bloqueante
+*/
+@import url(./styles/base.css);
+
+html{
+    background: black;
+    color: green;
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+h1{
+    color: white;
+}
+
+h2, h3, h4, h5, h6{
+    color: blue;
+}
+
+#parrafo-dos{
+    background-color: yellow;
+}
+
+.text-20{
+    font-size: 20px;
+}
+
+.text-32{
+    font-size: 32px;
+}
+
+.bg-red{
+    background-color: red;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.text-blue{
+    color: blueviolet;
+}
+
+.hijos-directos > li{
+    background-color: papayawhip;
+}
+
+.hijos-descendientes b{
+    background-color: white;
+}
+
+.hermanos-general ~ li{
+    background-color: aqua;
+}
+
+.hermanos-adyacentes + li{
+    background-color: yellow;
+}
+
+.selectores-atributos a[href]{
+    color: orangered;
+}
+
+.selectores-atributos a[target="_blank"]{
+    font-weight: bold;
+}
+
+.selectores-atributos a[href*="jonmircha"]{
+    font-size: 24px;
+}
+
+/* valor de atributo que comienza con la palabra index*/
+.selectores-atributos a[href^="http:"]{
+    text-decoration: none;
+}
+
+/*valor del atributo que termina con una palabra*/
+.selectores-atributos a[href$=".com"]{
+    background-color: wheat;
+}
+
+/*el comodin ~ aplica estilos si contiene el teto en cuestion una lista separada por espacios*/
+.selectores-atributos a[class~="cursos"]{
+    background-color: aqua;
+}
+
+/*El comodin | aplica el estilo si contien el texto en cuestion en una lista separada por espacios
+  y despues del texto en cuestion puede venir un guion medio*/
+  .selectores-atributos a[class|="menu"]{
+    font-style: italic;
+  }

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Curso CSS</title>
+  </head>
+  <body>
+    <article id="temario-css">
+      <h1>Aprendiendo CSS</h1>
+      <p><i>Cascading Style Sheet</i> - Hojas de estilo en cascada</p>
+      <h2>Temario del curso</h2>
+      <ul>
+        <li>
+          <a href="index.html#selectores-basicos">Selectores básicos</a>
+        </li>
+        <li>
+          <a href="index.html#selectores-avanzados">Selectores avanzados</a>
+        </li>
+      </ul>
+    </article>
+    <hr />
+    <article id="selectores-basicos">
+      <h2>Selectores básicos</h2>
+      <ol>
+        <li>
+          Selector de elementos: selecciona elementos en función del nombre del
+          elemento, como "p" para seleccionar todos los párrafos. Ejemplo:
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+            repellat dolorum at labore ipsam vitae quibusdam sequi cumque
+            tenetur nam sapiente, minima a explicabo aliquid accusantium? Cum
+            quas ex laborum.
+          </p>
+        </li>
+        <li>
+          Selector de ID: selecciona un solo elemento basado en el atributo id,
+          como <b>"#parrafo-dos"</b> para seleccionar el elemento con
+          <b>id="parrafo-dos"</b>. Ejemplo:
+          <p id="parrafo-dos">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+            quo. Aut veniam dolores repellendus alias sint deleniti repudiandae
+            illo consequuntur eos sed in perferendis officiis libero, error
+            quam? Doloremque, consequuntur.
+          </p>
+        </li>
+        <li>
+          Selector de clase: selecciona elementos según el atributo de clase,
+          como ".example" para seleccionar todos los elementos con
+          class="example". Ejemplo:
+          <p class="text-32 bg-red">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
+            facilis consequuntur itaque sint id illum. Doloribus vel
+            perspiciatis quidem mollitia saepe amet unde, atque deleniti
+            distinctio nemo vero in? Necessitatibus?
+          </p>
+          <p class="text-20 bg-white text-blue">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis animi
+            earum beatae consectetur asperiores eos magni, impedit
+            necessitatibus inventore voluptatum voluptatem, nostrum minima aut
+            laudantium ad at fuga pariatur. Voluptatum?
+          </p>
+        </li>
+      </ol>
+      <a href="index.html#temario-css">☝️</a>
+    </article>
+    <hr />
+    <article id="selectores-avanzados">
+      <h2>Selectores Avanzados</h2>
+      <h3>Selectores Hijos</h3>
+      <h4>Selector de hijo directo</h4>
+      <ul>
+        <li>
+          Child Selector: selecciona solo los hijos directos de un elemento
+          específico, como "ul > li" para seleccionar todos los list item (li)
+          secundarios directos de un unordered list (ul).
+        </li>
+        <br />
+        <ul class="hijos-directos">
+          <li><b>Primavera</b></li>
+          <li><b>Verano</b></li>
+          <li><b>Otoño</b></li>
+          <li><b>Invierno</b></li>
+        </ul>
+      </ul>
+      <h4>Selector de hijos descendientes</h4>
+      <ul>
+        <li>
+          Descendant Selector: selecciona elementos que son descendientes de un
+          elemento específico, como "ul b" para seleccionar a todas las palabras
+          dentro de una etiqueta bold (b).
+        </li>
+        <br />
+        <ul class="hijos-descendientes">
+          <li><b>Primavera</b></li>
+          <li><b>Verano</b></li>
+          <li><b>Otoño</b></li>
+          <li><b>Invierno</b></li>
+        </ul>
+      </ul>
+      <h3>Selectores de hermanos</h3>
+      <h4>Selector de hermanos general(indicado por el signo de tilde "~")</h4>
+      <p>
+        selecciona todos los elementos que son hermanos (en el mismo nivel) de
+        un elemento específico y que esten por debajo del elemento de
+        referencia. Por Ejemplo:
+      </p>
+      <ul>
+        <li><b>Primavera</b></li>
+        <li class="hermanos-general"><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Invierno</b></li>
+      </ul>
+      <h4>Selector de hermanos adyacente (indicado por el signo más "+")</h4>
+      <p>
+        El selector de hermanos más utilizado es el selector de hermanos
+        adyacente que selecciona un elemento inmediatamente precedido por el
+        elemento anterior. Por ejemplo:
+      </p>
+      <ul>
+        <li><b>Primavera</b></li>
+        <li class="hermanos-adyacentes"><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Invierno</b></li>
+      </ul>
+      <h3>Selectores de atributos</h3>
+      <p>
+        En CSS, los selectores de atributos le permiten seleccionar elementos en
+        función del valor de sus atributos. Hay varios tipos de selectores de
+        atributos, que incluyen:
+      </p>
+      <ul>
+        <li>
+          [atributo]: selecciona elementos que tienen el atributo especificado,
+          independientemente de su valor.
+        </li>
+        <li>
+          [atributo=valor]: Selecciona elementos que tienen el atributo
+          especificado con el valor exacto.
+        </li>
+        <li>
+          [atributo~=valor]: selecciona elementos que tienen el atributo
+          especificado con un valor que contiene una palabra especificada.
+        </li>
+        <li>
+          [atributo^=valor]: selecciona elementos que tienen el atributo
+          especificado con un valor que comienza con una cadena especificada.
+        </li>
+        <li>
+          [atributo$=valor]: selecciona elementos que tienen el atributo
+          especificado con un valor que termina con una cadena especificada.
+        </li>
+        <li>
+          [atributo*=valor]: selecciona elementos que tienen el atributo
+          especificado con un valor que contiene una cadena especificada.
+        </li>
+      </ul>
+      <p>Ejemplo:</p>
+      <nav class="selectores-atributos">
+        <ul>
+          <li><a href="https://jonmircha.com" target="_blank">Inicio</a></li>
+          <li>
+            <a
+              class="menu-item cursos button"
+              href="https://jonmircha.com/cursos"
+              target="_blank"
+              >Cursos</a
+            >
+          </li>
+          <li><a href="http://jonmircha.com/blog" target="_blank">Blog</a></li>
+          <li><a href="https://jonmircha.com/cv" target="_blank">CV</a></li>
+          <li>
+            <a href="http://jonmircha.com/ahora" target="_blank">Ahora</a>
+          </li>
+          <li>
+            <a
+              class="menu-item notas button"
+              href="https://jonmircha.com/notas"
+              target="_blank"
+              >Notas</a
+            >
+          </li>
+          <li>
+            <a href="index.html#temario-css">Regresar al temario</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="index.html#temario-css">☝️</a>
+    </article>
+    <hr />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>
