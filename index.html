@@ -19,6 +19,12 @@
         <li>
           <a href="index.html#selectores-avanzados">Selectores avanzados</a>
         </li>
+        <li>
+          <a href="index.html#pseudoclases">PseudoClases</a>
+        </li>
+        <li>
+          <a href="index.html#pseudoelementos">PseudoElementos</a>
+        </li>
       </ul>
     </article>
     <hr />
@@ -187,9 +193,148 @@
           </li>
         </ul>
       </nav>
+      <h3>Selector universal (*)</h3>
+      <p>
+        El selector universal en CSS está representado por un símbolo de
+        asterisco (*) y coincide con cualquier elemento en la página HTML. Las
+        reglas CSS aplicadas al selector universal se aplicarán a todos los
+        elementos de la página. Por ejemplo, para establecer un margen y un
+        relleno predeterminados para todos los elementos de la página:
+      </p>
+      <code> * { margin: 0; padding: 0; } </code><br />
+      <p>
+        El selector universal tambien puede ser contextualizado, es decir, para
+        que se aplique a todos los elementos dentro de un selector. Ejemplo:
+      </p>
+      <ul class="selector-universal">
+        <li>Primavera</li>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Invierno</li>
+      </ul>
       <a href="index.html#temario-css">☝️</a>
     </article>
     <hr />
+    <article id="pseudoclases">
+      <h2>Pseudoclases</h2>
+      <p>
+        Las pseudoclases de CSS son selectores especiales que le permiten
+        seleccionar elementos en función de un determinado estado o propiedad
+        que no es inherente al elemento. Estas son algunas de las pseudoclases
+        más utilizadas:
+      </p>
+      <ul>
+        <li>:link: Coincide con enlaces no visitados</li>
+        <li>:visited: Coincide con los enlaces visitados</li>
+        <li>
+          :hover: Coincide con un elemento cuando el usuario pasa el mouse sobre
+          él
+        </li>
+        <li>
+          :active:Coincide con un elemento cuando se está activando, como cuando
+          se hace clic en un botón
+        </li>
+        <li>
+          :focus: Coincide con un elemento que tiene foco, como un campo de
+          formulario que está actualmente seleccionado
+        </li>
+        <li>
+          :target: Esta pseudoclase en CSS se usa para seleccionar y diseñar el
+          objetivo de un identificador de fragmento en la URL. El identificador
+          de fragmento es la parte de una URL que sigue al símbolo "#" y hace
+          referencia a un elemento dentro de un documento. Al usar la
+          :targetpseudoclase, puede aplicar estilos específicos a un elemento
+          cuando es el objetivo de un identificador de fragmento.
+        </li>
+      </ul>
+      <p>Ejemplos:</p>
+      <form class="form-pseudoclases">
+        <input
+          type="text"
+          name="nombre"
+          placeholder="Escribe tu nombre"
+          required
+        />
+        <br />
+        <input
+          type="email"
+          name="correo"
+          placeholder="Escribe tu correo"
+          required
+        />
+        <br />
+        <input type="submit" />
+      </form>
+      <br /><br />
+      <nav class="menu-pseudoclases">
+        <a href="#seccion1">Seccion 1</a>
+        <a href="#seccion2">Seccion 2</a>
+        <a href="#seccion3">Seccion 3</a>
+        <a href="#seccion4">Seccion 4</a>
+      </nav>
+
+      <p>Mas selectores de PseudoClases de Posicion</p>
+      <ul>
+        <li>
+          :first-child: Coincide con un elemento que es el primer hijo de su
+          padre
+        </li>
+        <li>
+          :last-child: Coincide con un elemento que es el último hijo de su
+          padre
+        </li>
+        <li>
+          :nth-child(n): Coincide con un elemento que es el enésimo hijo de su
+          padre
+        </li>
+      </ul>
+      <br />
+      <ol class="lista-pseudoclases">
+        <li>Matthew</li>
+        <li>Mark</li>
+        <li>Luke</li>
+        <li>John</li>
+        <li>Acts</li>
+        <li>Romans</li>
+        <li>1 Corinthians</li>
+        <li>2 Corinthians</li>
+        <li>Galatians</li>
+        <li>Ephesians</li>
+        <li>Philippians</li>
+        <li>Colossians</li>
+        <li>1 Thessalonians</li>
+        <li>2 Thessalonians</li>
+        <li>1 Timothy</li>
+        <li>2 Timothy</li>
+        <li>Titus</li>
+        <li>Philemon</li>
+        <li>Hebrews</li>
+        <li>James</li>
+        <li>1 Peter</li>
+        <li>2 Peter</li>
+        <li>1 John</li>
+        <li>2 John</li>
+        <li>3 John</li>
+        <li>Jude</li>
+        <li>Revelation</li>
+      </ol>
+      <article class="articulo-pseudoclases">
+        <header>Esto es un header</header>
+        <p>esto es un parrafo</p>
+        <div>esto es una div</div>
+        <p>esto es un parrafo</p>
+        <section>esto es una section</section>
+        <p>esto es un parrafo</p>
+        <div>esto es una div</div>
+        <p>esto es un parrafo</p>
+        <footer>esto es un footer</footer>
+      </article>
+      <p>
+        Las pseudoclases se pueden combinar con otros selectores para crear
+        estilos complejos y dinámicos.
+      </p>
+      <a href="index.html#temario-css">☝️</a>
+    </article>
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </body>
 </html>

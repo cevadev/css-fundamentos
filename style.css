@@ -90,3 +90,93 @@ h2, h3, h4, h5, h6{
   .selectores-atributos a[class|="menu"]{
     font-style: italic;
   }
+
+/* selector universal*/
+*{
+    font-family: sans-serif;
+}
+
+.selector-universal *{
+    font-size: 24px;
+}
+
+/* Pseudoclases */
+/* estilos para todos los elementos dentro de la clase form-pseudoclases con la pseudoclase required*/
+.form-pseudoclases *:required{
+    border-color: yellow;
+}
+
+.form-pseudoclases *:valid{
+    border-color: green;
+}
+
+.form-pseudoclases *:invalid{
+    border-color: red;
+}
+
+.form-pseudoclases *:focus{
+    background-color: green;
+    color: white;
+}
+
+.menu-pseudoclases a:hover{
+    color: orange;
+}
+
+#temario-css:target{
+    background-color: lightgreen;
+}
+
+/* pseudoclases por posicion*/
+.lista-pseudoclases li:first-child{
+    color: papayawhip;
+}
+
+.lista-pseudoclases li:last-child{
+    color: blue;
+}
+
+.lista-pseudoclases li:nth-child(3){
+    color: aqua;
+}
+
+.lista-pseudoclases li:nth-child(2n){
+    color: red;
+}
+
+.lista-pseudoclases li:nth-child(3n){
+    font-weight: bold;
+}
+
+/* estilos para los elementos en posicion pares*/
+.lista-pseudoclases li:nth-child(even){
+    background-color: skyblue;
+}
+
+/* estilos para los elementos en posicion impar*/
+.lista-pseudoclases li:nth-child(odd){
+    background-color: orange;
+}
+
+.articulo-pseudoclases p:first-of-type{
+    background-color: aquamarine;
+}
+
+/* aplicamos estilos al primer elemento de tipo p*/
+.articulo-pseudoclases p:last-of-type{
+    background-color: yellow;
+}
+
+.articulo-pseudoclases p:nth-of-type(3n){
+    background-color: red;
+}
+
+.articulo-pseudoclases p:nth-child(odd){
+    background-color: white;
+}
+
+/*aplicamos estilos a todos los elementos de la clase .articulo-pseudoclases pero menos a los elementos p*/
+.articulo-pseudoclases *:not(p){
+    background-color: fuchsia;
+}
+/*fin de pseudoclases*/
