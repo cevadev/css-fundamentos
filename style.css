@@ -180,3 +180,46 @@ h2, h3, h4, h5, h6{
     background-color: fuchsia;
 }
 /*fin de pseudoclases*/
+
+/* PseudoElementos*/
+.saga-geminis::before{
+    content: " 🎶 ";
+}
+
+.saga-geminis::after{
+    content: " ✔ ";
+}
+
+.saga-precio::before{
+    content: "$ ";
+    font-weight: bold;
+}
+
+.saga-precio::after{
+    content: " USD";
+    font-weight: bold;
+}
+
+.p-pseudoelementos::first-letter{
+    font-size: 32px;
+}
+
+.p-pseudoelementos::first-line{
+    color: coral;
+}
+
+.p-pseudoelementos::selection{
+    color: yellow;
+}
+
+/*Agrupando selectores*/
+.form-agrupar-selectores input[type="text"],
+.form-agrupar-selectores input[type="email"],
+.form-agrupar-selectores textarea{
+    border-color: aquamarine;
+    border-width: 2px;
+    background-color: blue;
+    display: block;
+    width: 300px;
+}
+/* Fin PseudoElementos*/
