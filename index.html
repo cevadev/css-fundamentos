@@ -28,6 +28,9 @@
         <li>
           <a href="index.html#agrupar-selectores">Agrupar Selectores</a>
         </li>
+        <li>
+          <a href="index.html#algoritmo-css">Algoritmo de CSS</a>
+        </li>
       </ul>
     </article>
     <hr />
@@ -401,6 +404,86 @@
         ></textarea>
         <input type="submit" value="Enviar" />
       </form>
+      <a href="index.html#temario-css">☝️</a>
+    </article>
+    <hr />
+    <article id="algoritmo-css">
+      <h2>El algoritmo de CSS</h2>
+      <p>
+        El algoritmo CSS (hojas de estilo en cascada) es un proceso utilizado
+        por los navegadores web para determinar los estilos que se aplican a los
+        elementos de una página web. El algoritmo CSS se utiliza para resolver
+        conflictos entre diferentes estilos que se pueden aplicar a un solo
+        elemento y para decidir qué estilos tienen prioridad en caso de estilos
+        en conflicto. El algoritmo CSS funciona según la naturaleza en cascada
+        de los estilos CSS, lo que significa que los estilos se pueden heredar
+        de los elementos principales a los elementos secundarios, y que los
+        estilos más específicos pueden anular los estilos más generales. Aquí
+        hay un resumen de cómo funciona el algoritmo CSS:
+      </p>
+      <dl>
+        <dt>
+          1. El navegador recopila todos los estilos aplicables a un elemento,
+          incluidos los estilos definidos en hojas de estilo externas, estilos
+          definidos en el encabezado del documento y estilos definidos en línea
+          en el HTML.
+        </dt>
+        <dt>
+          2. Luego, el navegador ordena los estilos según su origen e
+          importancia, con los estilos de agente de usuario (estilos
+          predeterminados aplicados por el navegador) que tienen la prioridad
+          más baja y los estilos definidos directamente en un elemento que tiene
+          la prioridad más alta.
+        </dt>
+        <dt>
+          3. Luego, el navegador procesa los estilos en el orden en que fueron
+          ordenados, aplicando estilos de izquierda a derecha, y los estilos
+          posteriores tienen prioridad sobre los estilos anteriores.
+        </dt>
+        <dt>
+          4. El navegador repite el proceso para cada elemento de la página,
+          utilizando los estilos de los elementos principales para determinar
+          los estilos predeterminados para los elementos secundarios.
+        </dt>
+        <dt>
+          5. Finalmente, el navegador representa la página, utilizando los
+          estilos calculados para determinar el diseño y la apariencia de cada
+          elemento.
+        </dt>
+      </dl>
+      <dl>
+        Especificidad en CSS
+        <dt>
+          La especificidad en CSS se refiere a la prioridad que tiene una regla
+          CSS particular sobre otras reglas que se aplican al mismo elemento. El
+          navegador utiliza la especificidad para determinar qué regla CSS debe
+          tener prioridad cuando se aplican varias reglas al mismo elemento. La
+          especificidad de CSS se calcula en función de cuatro factores: estilos
+          en línea, ID, clases, atributos y pseudoclases, y elementos y
+          pseudoelementos. A estos factores se les asigna un peso; los estilos
+          en línea tienen el peso más alto y los elementos tienen el peso más
+          bajo. Cuando se aplican dos reglas al mismo elemento, gana la regla
+          con mayor especificidad.
+        </dt>
+        <br /><br />
+        <dt>La especificidad se calcula de la siguiente manera</dt>
+        <dt>Etiquetas y pseudo elementos ............. 0,0,0,1</dt>
+        <dt>Clases, atributos, pseudoelementos..... 0,0,1,0</dt>
+        <dt>Identificadores ...................................... 0,1,0,0</dt>
+        <dt>Estilos en linea ..................................... 1,0,0,0</dt>
+        <dt>!important .....................Rompe la especificidad</dt>
+        <br /><br />
+        <p>
+          Cuando tenemos elementos html con clases y id los estilos se deben
+          especificar asi>
+        </p>
+        <p>etiqueta -> selector id -> selector clase -> selector atributo</p>
+        <h5>Ejemplos de Cascada y Especificidad</h5>
+        <blockquote id="cita-wiston" class="cita-wiston">
+          El éxito no es definitivo, el fracaso no es fatal: lo que cuenta es el
+          coraje de continuar - <cite>Wiston Churchil</cite>
+        </blockquote>
+      </dl>
       <a href="index.html#temario-css">☝️</a>
     </article>
     <hr />

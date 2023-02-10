@@ -223,3 +223,33 @@ h2, h3, h4, h5, h6{
     width: 300px;
 }
 /* Fin PseudoElementos*/
+
+/* cascada y especificidad elemento id y clase*/
+blockquote#cita-wiston.cita-wiston{
+    background-color: skyblue; /* especificidad de 0,1,1,1*/
+}
+
+/* cascada y especificidad a un elemento */
+blockquote{
+    background-color: wheat; /*especificidad de 0,0,0,1 */
+}
+
+/* cascada y especificidad a un id*/
+#cita-wiston{
+    background-color: tomato; /* especificidad 0,1,0,0*/
+}
+
+/* cascada y especificidad a un elemento con clase*/
+blockquote.cita-wiston{
+    background-color: yellow; /* especificidad 0,0,1,1*/
+}
+
+/* cascada y especificidad a una clase*/
+.cita-wiston{
+    background-color: greenyellow; /* especificidad de 0,0,1,0 */
+}
+
+/* cascada y especificidad a elemento con id*/
+blockquote#cita-wiston{
+    background-color: white; /* especificidad de 0,1,0,1*/
+}
