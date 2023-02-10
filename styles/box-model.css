@@ -1,0 +1,11 @@
+
+h1{
+    width: 400px;
+    height: 200px;
+    border-color: green;
+    border-top-color: aqua;
+    border-width: thick; /*thin = 1px; medium = 3px; thick = 5px*/
+    border-style: solid;
+    border: 2px dashed blue; /* todas las propiedades en una sola*/
+}
+
