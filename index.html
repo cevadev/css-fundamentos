@@ -451,8 +451,8 @@
           elemento.
         </dt>
       </dl>
+      <h3>Especificidad en CSS</h3>
       <dl>
-        Especificidad en CSS
         <dt>
           La especificidad en CSS se refiere a la prioridad que tiene una regla
           CSS particular sobre otras reglas que se aplican al mismo elemento. El
@@ -484,6 +484,57 @@
           coraje de continuar - <cite>Wiston Churchil</cite>
         </blockquote>
       </dl>
+      <br /><br />
+      <h3>Herencia en CSS</h3>
+      <dl>
+        <dt>
+          En CSS, la herencia se refiere al mecanismo por el cual ciertas
+          propiedades CSS se pasan de un elemento principal a sus elementos
+          secundarios. Esto permite una forma más eficiente y concisa de diseñar
+          un documento, ya que puede establecer estilos en un elemento principal
+          y hacer que se apliquen automáticamente a sus elementos secundarios,
+          en lugar de tener que configurar los estilos en cada elemento
+          secundario individual.
+        </dt>
+        <dt>
+          Por ejemplo, si establece la propiedad de familia de fuentes en un
+          elemento principal, cualquier texto dentro de ese elemento principal
+          heredará la familia de fuentes. Sin embargo, si establece una
+          propiedad de familia de fuentes diferente en un elemento secundario,
+          esa propiedad anulará la familia de fuentes heredada del padre.
+        </dt>
+        <dt>
+          Es importante comprender que no todas las propiedades de CSS se
+          heredan. Por ejemplo, las propiedades de ancho y alto no se heredan,
+          ya que cada elemento tiene su propio ancho y alto. Puede encontrar una
+          lista de propiedades heredadas en la especificación CSS.
+        </dt>
+        <br /><br />
+        <dt>
+          En CSS, el inheritvalor se usa para especificar explícitamente que una
+          propiedad debe heredar su valor de su elemento principal. Cuando una
+          propiedad se establece en inherit, toma el mismo valor calculado que
+          la propiedad correspondiente del elemento principal.
+        </dt>
+        <dt>
+          Por ejemplo, si tiene un elemento principal con un tamaño de fuente de
+          16 px y desea que un elemento secundario herede ese tamaño de fuente,
+          puede establecer la propiedad de tamaño de fuente del elemento
+          secundario en inherit pero si queremos evitarla podemos asignar otro
+          valor o inicializar la propiedad en cuestion con el valor initial
+        </dt>
+        <br /><br />
+        <code> p { font-size: 16px; } span { font-size: inherit; } </code>
+        <dt>
+          En este ejemplo, el spanelemento secundario tendrá un tamaño de fuente
+          de 16 px, porque ha heredado el tamaño de fuente de su pelemento
+          principal.
+        </dt>
+      </dl>
+      <h5>Ejemplo de herencia</h5>
+      <blockquote class="cita-jesus">
+        Amaras a tu projimo como a ti mismo <cite>Jesus (Mateo 22:39)</cite>
+      </blockquote>
       <a href="index.html#temario-css">☝️</a>
     </article>
     <hr />

@@ -253,3 +253,19 @@ blockquote.cita-wiston{
 blockquote#cita-wiston{
     background-color: white; /* especificidad de 0,1,0,1*/
 }
+
+/* Herencia*/
+.cita-jesus{
+    background-color: aquamarine;
+    font-size: 38px;
+    border-style: dotted;
+    border-color: darkorange;
+}
+
+.cita-jesus cite{
+    background-color: khaki;
+    background-color: inherit;
+    font-size: initial;
+    border-style: inherit;
+    border-color: inherit;
+}
