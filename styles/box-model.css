@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 
 h1{
     width: 400px;
@@ -9,3 +12,32 @@ h1{
     border: 2px dashed blue; /* todas las propiedades en una sola*/
 }
 
+.caja-uno,
+.caja-dos{
+    background-color: chocolate;
+    border: medium solid orange;
+    padding: 10px;
+    margin: 20px;
+    padding: 20px 40px;
+    margin: 40px 20px;
+    padding: 0 40px 20px; /*aplica 0 para top, 40 para left y right, 20 para bottom*/
+    margin: 50px 30px 0;
+}
+
+.caja-linea,
+.caja-bloque{
+    background-color: darkcyan;
+    color: white;
+    width: 500px; /*este estilo solo se aplica a la caja de bloque*/
+    height: 250px; /*ete estilo solo se aplica a la caja de bloque*/
+    border: medium solid black;
+    padding: 16px; /* nunca se debe aplicar padding vertical a un elemento de linea */
+}
+
+.caja-bloque{
+    margin: 32px;
+}
+
+.caja-linea{
+    margin: 48px; /*aplica las dimensiones en horizontal*/
+}
