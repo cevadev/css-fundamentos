@@ -36,8 +36,32 @@ h1{
 
 .caja-bloque{
     margin: 32px;
+    display: block;
 }
 
 .caja-linea{
     margin: 48px; /*aplica las dimensiones en horizontal*/
+    display: inline;
+}
+
+.caja-none,
+.caja-linea-bloque,
+.caja-hidden{
+    background-color: darkolivegreen;
+    color: wheat;
+    width: 600px;
+    height: 300px;
+    border: medium solid black;
+}
+
+.caja-linea-bloque{
+    display: inline-block;
+}
+
+.caja-none{
+    display: none;
+}
+
+.caja-hidden{
+    visibility: hidden;
 }
