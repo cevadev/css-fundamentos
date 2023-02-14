@@ -103,3 +103,35 @@ h1{
 .box-sizing-border{
     box-sizing: border-box;
 }
+
+.container-floats{
+    background-color: cornflowerblue;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+.margin-collapse{
+    background-color: skyblue;
+}
+
+.margin-collapse section{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* sitio web*/
+.sitio-web{
+    border: thin solid black;
+    background-color: thistle;
+    width: 800px;
+    height: 1000px;
+    /*centrado del div*/
+    margin-left: auto;
+    margin-right: auto;
+}
