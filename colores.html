@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/colores.css" />
+    <title>Colores en CSS</title>
+  </head>
+  <body>
+    <article>
+      <h1>Colores en CSS</h1>
+      <dl>
+        Hay varias formas de usar colores en CSS. Estos son algunos de los
+        métodos más comunes:
+      </dl>
+      <dl>
+        Uso del keyword color: CSS proporciona palabras clave de color
+        predefinidas, como red, blue, green, etc. Simplemente puede usar el
+        nombre del color como valor para la propiedad color.
+      </dl>
+      <dl>
+        Uso de valores hexadecimales: puede especificar un color mediante un
+        valor hexadecimal que represente la cantidad de rojo, verde y azul del
+        color. Los valores hexadecimales comienzan con un símbolo de almohadilla
+        (#), seguido de seis dígitos.
+      </dl>
+      <dl>
+        Uso de valores RGB: puede especificar un color mediante la funcion rgb()
+        que le permite especificar la cantidad de rojo, verde y azul en el
+        color.
+      </dl>
+      <dl>
+        Uso de valores RGBA: también puede especificar un color mediante la
+        funcion rgba() que le permite especificar la cantidad de rojo, verde y
+        azul en el color, así como el nivel de opacidad. El nivel de opacidad se
+        especifica como un valor entre 0 y 1
+      </dl>
+      <dl>
+        Uso de valores HSL: puede especificar un color mediante la funcion hsl()
+        que le permite especificar el tono, la saturación y la luminosidad del
+        color. El tono se especifica como un ángulo entre 0 y 360 grados,
+        mientras que la saturación y la luminosidad se especifican como
+        porcentajes entre 0% y 100%.
+      </dl>
+      <dl>
+        En HSL, el tono generalmente se representa como un ángulo en la rueda de
+        colores, con el rojo en 0 grados, el verde en 120 grados y el azul en
+        240 grados. La saturación generalmente se representa como un porcentaje,
+        siendo 100% el color más puro e intenso y 0% completamente desaturado
+        (es decir, escala de grises). La luminosidad también suele representarse
+        como un porcentaje, siendo el 0 % completamente negro y el 100 %
+        completamente blanco.
+      </dl>
+      <dl>Ejemplos</dl>
+      <h3>Color por Nombre</h3>
+      <div class="color-by-name">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur
+          dolorum deleniti impedit nobis ea minus explicabo? Quidem earum error
+          perspiciatis, esse similique nisi porro molestias, minus aperiam
+          commodi cupiditate sed!
+        </p>
+      </div>
+      <h3>Color por Hexadecimal</h3>
+      <div class="color-by-hexa">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur
+          dolorum deleniti impedit nobis ea minus explicabo? Quidem earum error
+          perspiciatis, esse similique nisi porro molestias, minus aperiam
+          commodi cupiditate sed!
+        </p>
+      </div>
+      <h3>Color por RGB</h3>
+      <div class="color-by-rgb">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur
+          dolorum deleniti impedit nobis ea minus explicabo? Quidem earum error
+          perspiciatis, esse similique nisi porro molestias, minus aperiam
+          commodi cupiditate sed!
+        </p>
+      </div>
+      <h3>Color por HSL (Hue Saaturaton Lightness)</h3>
+      <div class="color-by-hsl">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur
+          dolorum deleniti impedit nobis ea minus explicabo? Quidem earum error
+          perspiciatis, esse similique nisi porro molestias, minus aperiam
+          commodi cupiditate sed!
+        </p>
+      </div>
+      <h3>Valores transparent & currentColor</h3>
+      <div class="color-transparent-current">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur
+          dolorum deleniti impedit nobis ea minus explicabo? Quidem earum error
+          perspiciatis, esse similique nisi porro molestias, minus aperiam
+          commodi cupiditate sed!
+        </p>
+      </div>
+      <h3>Propiedad Opacity</h3>
+      <dl>
+        La propiedad de opacidad de CSS se utiliza para controlar la
+        transparencia de un elemento HTML. Determina hasta qué punto el elemento
+        permite que el fondo se vea a través de él. La opacidad se mide en
+        valores de 0 a 1, donde 0 representa transparencia completa y 1
+        representa opacidad completa.
+      </dl>
+      <dl>
+        Para aplicar opacidad a un elemento HTML, puede usar la propiedad de
+        opacidad de CSS con el valor de opacidad deseado. Por ejemplo, para
+        establecer la opacidad de un elemento al 50%, puede usar la siguiente
+        regla CSS:
+      </dl>
+      <dl>
+        <code> .element { opacity: 0.5; } </code>
+      </dl>
+      <dl>
+        La propiedad de opacidad se puede aplicar a una amplia gama de elementos
+        HTML, como texto, imágenes, fondos y bordes. Se puede usar para crear
+        varios efectos, como la aparición y desaparición gradual de elementos,
+        la creación de superposiciones transparentes y la combinación de
+        colores.
+      </dl>
+      <dl>
+        Es importante tener en cuenta que cuando un elemento se vuelve
+        transparente mediante la propiedad de opacidad, todos sus elementos
+        secundarios heredan el mismo nivel de transparencia. Por lo tanto, si
+        desea aplicar diferentes niveles de transparencia a los elementos
+        secundarios, debe crear un contenedor separado para ellos y aplicar la
+        propiedad de opacidad a ese contenedor.
+      </dl>
+      <dl>
+        Además, tenga en cuenta que la propiedad de opacidad afecta no solo el
+        fondo del elemento, sino también el texto y cualquier otro contenido
+        dentro del elemento. Por lo tanto, si establece la opacidad de un
+        elemento en un valor bajo, el texto que contiene puede resultar difícil
+        de leer. En tales casos, puede usar otras propiedades de CSS, como el
+        color y la sombra del texto, para mejorar la legibilidad del texto.
+      </dl>
+      <dl>Ejemplo:</dl>
+      <div class="opacity">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur
+          dolorum deleniti impedit nobis ea minus explicabo? Quidem earum error
+          perspiciatis, esse similique nisi porro molestias, minus aperiam
+          commodi cupiditate sed!
+        </p>
+      </div>
+      <br />
+      <a href="index.html#temario-css">☝️</a>
+    </article>
+    <hr />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>

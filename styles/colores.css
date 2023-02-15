@@ -1,0 +1,59 @@
+.color-by-name{
+    background-color: black;
+    color: darkgreen;
+    border: thick solid yellow;
+}
+
+.color-by-hexa{
+    background-color: #FF6600;
+    /*verde con opacidad al 50%*/
+    background-color: #00ff0050;
+    background-color: #0f05;
+
+    color: #12ac78;
+    border: thick solid #ffffff;
+    border: thick solid #fff;
+    
+    border: thick solid #ff0000;
+    border: thick solid #f00;
+    
+    border: thick solid #00ff00;
+    border: thick solid #0f0;
+    
+    border: thick solid #0000ff;
+    border: thick solid #00f;
+    
+    border: thick solid #000000;
+    border: thick solid #000;
+}
+
+.color-by-rgb{
+    background-color: rgb(0, 0, 255);
+    /*azul con una opacidad del 35%*/
+    background-color: rgba(0, 0, 255, 0.35);
+    color: rgb(255, 255, 255);
+    border: thick solid rgb(0, 0, 0);
+}
+
+.color-by-hsl{
+    background-color: hsl(30, 100%, 60%);
+    /*color naranja con una opacidad del 50% */
+    background-color: hsla(30, 100%, 50%, 0.5);
+    color: hsl(240, 90%, 22%);
+}
+
+.color-transparent-current{
+    background-color: firebrick;
+    background-color: transparent;
+    /*hereda el valor por defecto o asignado de la propiedad color del ancestro*/
+    /*para este div su ancestro es el body*/
+    color: currentColor;
+}
+
+.opacity{
+    background-color: orchid;
+    color: navy;
+    border: thick solid black;
+    /*la opacidad impacta el color de fondo, texto y borde*/
+    opacity: .5;
+}
