@@ -1,0 +1,75 @@
+.static{
+    background-color: yellow;
+    /*posicionamiento static por defecto*/
+    position: static;
+}
+
+.relative{
+    background-color: turquoise;
+    position: relative;
+    width: 300px;
+    height: 50px;
+    /*tomando como referencia el margin top nos alejamos 10 pixeles*/
+    top: 5px;
+    left: 100px;
+}
+
+.absolute{
+    background-color: papayawhip;
+    position: absolute;
+    /*el ancestro de este div es la etiqueta html*/
+    /*left: 100px;
+    top: 100px;*/
+    width: 200px;
+    height: 50px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.relative-parent{
+    background-color: khaki;
+    position: relative;
+    top: -5px;
+    left: 50px;
+    width: 600px;
+    height: 50px;
+    
+}
+
+.absolute-child{
+    background-color: lightcoral;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.fixed{
+    background-color: lightgreen;
+    position: fixed;
+    width: 300px;
+    height: 100px;
+    right: 30px;
+    bottom: 10px;
+    top: 30px;
+    left: 400px;
+}
+
+.sticky{
+    background-color: lightgray;
+    /*el div es sticky dentro de las dimensiones del article*/
+    position: sticky;
+    /*llegado los 50px del top se fije*/
+    top: 50px;
+}
+
+.sticky-parent{
+    border: thin dashed black;
+    height: 600px;
+}
+
+.sticky-child{
+    background-color: lightslategray;
+    position: sticky;
+    /*se convierte en sticky cuando llegue a 75px del top del sticky-parent*/
+    top: 25px;
+}

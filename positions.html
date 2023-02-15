@@ -11,10 +11,119 @@
     <main>
       <article>
         <h2>Positions</h2>
+        <dfn>
+          En CSS, la propiedad position se usa para definir el comportamiento de
+          posicionamiento de un elemento HTML. Especifica cómo se coloca un
+          elemento dentro de su contenedor principal y se puede establecer en
+          uno de los siguientes cinco valores:
+        </dfn>
+        <dl>
+          <b>static: </b>
+          Este es el valor predeterminado y significa que el elemento se coloca
+          de acuerdo con el flujo normal del documento. No se puede mover usando
+          las propiedades top, bottom, left, right
+        </dl>
+        <dl>
+          <b>relative: </b>
+          esto coloca el elemento en relación con su posición normal en el flujo
+          del documento. Las propiedades top, bottom, left y right se pueden
+          usar para mover el elemento en cualquier dirección con respecto a su
+          posición inicial. El elemento pierde sus dimensiones y posicion
+          original en el flujo del documento.
+        </dl>
+        <dl>
+          <b>absolute: </b>
+          esto posiciona el elemento en relación con su ancestro posicionado más
+          cercano, o con el bloque contenedor inicial si no hay un ancestro
+          posicionado. Las propiedades top, bottom, left y right se pueden usar
+          para colocar el elemento en relación con su antecesor. El elemento
+          pierde sus dimensiones y posicion original en el flujo del documento
+        </dl>
+        <dl>
+          <b>fixed: </b>
+          esto coloca el elemento en relación con la ventana gráfica o documento
+          html, lo que significa que permanece en la misma posición (queda fijo)
+          incluso si el usuario se desplaza por la página. Las propiedades top,
+          bottom, left y right se pueden usar para colocar el elemento en
+          relación con la ventana gráfica. El elemento pierde sus dimensiones y
+          posicion original
+        </dl>
+        <dl>
+          <b>sticky: </b>
+          esto posiciona el elemento como relative hasta que alcanza un umbral
+          específico, en cuyo punto se convierte en fixed. Esto puede ser útil
+          para crear elementos que permanecen visibles incluso cuando el usuario
+          se desplaza por la página. Las propiedades top, left, bottom, right no
+          mueven el elemento, sino que sirven como un punto de referencia,
+          mientras no lleguen a ese valor el elemento se comporta como relative,
+          cuando llega se convierte en fixed.
+        </dl>
+        <dl>
+          Para que este comportamiento funcione el elemento sticky debe ser hijo
+          directo del body o su elemento contenedor debe tener dimensiones
+          definidas y solo sera sticky dentro de las dimensiones de su
+          contenedor padre
+        </dl>
+        <dl>
+          De forma predeterminada, el ancho y la altura del elemento están
+          determinados por su contenido, pero puede usar las propiedades width y
+          height para establecer dimensiones específicas para el elemento.
+          Además, la propiedad z-index se puede utilizar para controlar el orden
+          de apilamiento de los elementos posicionados.
+        </dl>
+        <h4>Ejemplo Posicionamientos</h4>
+        <div class="static">Caja Static</div>
+        <div class="relative">Caja Relative</div>
+        <div class="absolute">Caja Absoluta</div>
+        <section class="relative-parent">
+          <div class="absolute-child">Caja Absoluta con Ancestro Relativo</div>
+        </section>
+        <div class="fixed">Caja Fixed</div>
+        <section class="sticky-parent">
+          <div class="sticky-child">Caja Sticky as a Child</div>
+        </section>
+        <br />
+        <a href="index.html#temario-css">☝️</a>
+      </article>
+      <div class="sticky">Caja Pegajosa</div>
+      <hr />
+      <article>
+        <h2>Posicionamiento Z-Index</h2>
+        <dl>
+          La propiedad CSS z-index controla el orden de apilamiento vertical de
+          los elementos que se colocan a lo largo del eje z, que es el eje que
+          se extiende desde la pantalla hacia el espectador. Cuanto más alto sea
+          el valor z-index de un elemento, más cerca aparecerá para el
+          espectador y más probable será que se superponga a otros elementos con
+          valores z-index más bajos.
+        </dl>
+        <dl>
+          Cuando dos o más elementos se superponen en una página web, el
+          elemento con el valor z-index más alto se mostrará encima de los otros
+          elementos. La propiedad z-index se usa comúnmente cuando se trabaja
+          con elementos en capas o apilados, como menús, ventanas emergentes y
+          controles deslizantes de imágenes
+        </dl>
+        <dl>
+          La propiedad z-index puede aceptar cualquier valor entero, incluidos
+          valores negativos, y tiene un valor predeterminado de auto. El valor
+          auto significa que el navegador determinará automáticamente el orden
+          de apilamiento de los elementos según su posición en el documento HTML
+          y el orden en que aparecen en el marcado.
+        </dl>
+        <dl>
+          Un elemento padre nunca podra estar sobre sus elementos hijos, sin
+          embargo los elementos hijos si pueden dandoles un valor negativo
+        </dl>
+        <dl>Ejemplo:</dl>
+        <div class="z-index-1">Probando z-index 1</div>
+        <div class="z-index-2">Probando z-index 2</div>
         <br />
         <a href="index.html#temario-css">☝️</a>
       </article>
       <hr />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </main>
   </body>
 </html>
