@@ -41,4 +41,31 @@ body{
     background-color: palegoldenrod;
     padding: 16px;
     text-align: center;
+    position: sticky;
+    top: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.modal-window{
+    background-color: black;
+    color: darkgreen;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+    display: none;
+}
+
+/*cuando modal-window tiene el target en pantalla*/
+.modal-window:target{
+    display: block;
+}
+
+.box{
+    background-color: powderblue;
+    padding: 20px;
+    margin-top: -30px;
 }
