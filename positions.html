@@ -113,11 +113,16 @@
         </dl>
         <dl>
           Un elemento padre nunca podra estar sobre sus elementos hijos, sin
-          embargo los elementos hijos si pueden dandoles un valor negativo
+          embargo los elementos hijos si pueden dandoles un valor negativo y que
+          el elemento padre no tenga definido la propiedad z-index
         </dl>
         <dl>Ejemplo:</dl>
         <div class="z-index-1">Probando z-index 1</div>
         <div class="z-index-2">Probando z-index 2</div>
+        <!--comportamiento de z-index con padre e hijo-->
+        <section class="z-index-parent">
+          <div class="z-index-child">Hijo z-index</div>
+        </section>
         <br />
         <a href="index.html#temario-css">☝️</a>
       </article>
