@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/units.css" />
+    <title>Unidades de medida en CSS</title>
+  </head>
+  <body>
+    <article>
+      <h1>Unidades de medida en CSS</h1>
+      <p>Las unidades de medida en css las podemos clasificar en 2</p>
+      <dl>
+        <b>Unidades de medidas absolutas:</b> sus medidas no cambia, son
+        unidades de mundo real
+      </dl>
+      <ul>
+        <li>pc, cm, mm, in, Q</li>
+        <li>pt (1/72in)</li>
+        <li>px (1/96in)</li>
+      </ul>
+
+      <dl>
+        <b>Unidades de medida relativas: </b> Su valor es relativo a su contexto
+      </dl>
+      <ul>
+        <li>
+          <b>em</b> basada en la anchura de la m de la fuente del elemento
+        </li>
+        <li>
+          <b>rem</b> basada en la anchura de la m de la fuente del elemento raiz
+          (html)
+        </li>
+        <li><b>ex</b> basada en la altura de la x de la fuente del elemento</li>
+        <li><b>ch</b> basada en la anchura del 0 de la fuente del elemento</li>
+        <li><b>%</b> al tamanio del contenedor</li>
+        <li><b>vh</b> ancho del viewport que va de 1 al 100</li>
+        <li><b>vh</b> alto del viewport que va de 1 al 100</li>
+        <li><b>vmax</b> entre el vw y vh toma el que tenga mayor valor</li>
+        <li><b>vmin</b> entre el vw y vh toma el que tenga menor valor</li>
+        <p>
+          Conversiones entre unidades: <a href="http://pxtoem.com">conversor</a>
+        </p>
+      </ul>
+      <h2>Ejemplos con Pixels</h2>
+      <div class="pixels">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nostrum
+        illum debitis natus facere voluptates nam et harum veniam libero. Animi
+        alias accusantium accusamus quas, cupiditate reiciendis quisquam cum
+        optio!
+      </div>
+      <br />
+      <h2>Ejemplos con Ems</h2>
+      <div class="em">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nostrum
+        illum debitis natus facere voluptates nam et harum veniam libero. Animi
+        alias accusantium accusamus quas, cupiditate reiciendis quisquam cum
+        optio!
+        <section class="em-child">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+          odit earum vero! Accusamus unde quidem aperiam dicta corporis
+          provident voluptatibus ad exercitationem voluptas corrupti, magni
+          magnam doloremque cum error iste.
+        </section>
+      </div>
+      <br />
+
+      <h2>Ejemplos con Rems (Root Ems)</h2>
+      <div class="rem">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nostrum
+        illum debitis natus facere voluptates nam et harum veniam libero. Animi
+        alias accusantium accusamus quas, cupiditate reiciendis quisquam cum
+        optio!
+        <section class="rem-child">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+          odit earum vero! Accusamus unde quidem aperiam dicta corporis
+          provident voluptatibus ad exercitationem voluptas corrupti, magni
+          magnam doloremque cum error iste.
+        </section>
+      </div>
+      <br />
+
+      <h2>Ejemplos con EXs</h2>
+      <div class="ex">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nostrum
+        illum debitis natus facere voluptates nam et harum veniam libero. Animi
+        alias accusantium accusamus quas, cupiditate reiciendis quisquam cum
+        optio!
+        <section class="ex-child">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+          odit earum vero! Accusamus unde quidem aperiam dicta corporis
+          provident voluptatibus ad exercitationem voluptas corrupti, magni
+          magnam doloremque cum error iste.
+        </section>
+      </div>
+      <br />
+
+      <h2>Ejemplos con CHs</h2>
+      <div class="ch">0123456789</div>
+      <br />
+
+      <h2>Porcentajes (%)</h2>
+      <div class="percentages">Esta es una caja de bloque</div>
+      <div class="height-parent">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat
+        necessitatibus, veniam placeat iste fugit voluptas officia quia eos sunt
+        quisquam nihil natus ab inventore qui amet dicta mollitia eius rem.
+        <div class="height-child"></div>
+      </div>
+      <br />
+      <a href="index.html#temario-css">☝️</a>
+    </article>
+    <hr />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>
