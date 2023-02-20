@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/fuentes-texto.css" />
+    <title>Estilos de fuentes y Texto</title>
+  </head>
+  <body>
+    <article>
+      <h2>Estilos de fuentes y Textos</h2>
+      <h3>Font-Family</h3>
+      <dl>
+        La propiedad se usa para especificar la fuente de un elemento. Determina
+        qué fuente debe usarse para representar el contenido de texto del
+        elemento. La font-familypropiedad puede tomar uno o más nombres de
+        familias de fuentes, que generalmente se enumeran en orden de
+        preferencia. Si la primera fuente no está disponible en la computadora
+        del usuario, el navegador probará con la siguiente fuente de la lista, y
+        así sucesivamente.
+      </dl>
+      <dl>Ejemplo</dl>
+      <dl><code> p { font-family: Arial, Helvetica, sans-serif; } </code></dl>
+      <dl>
+        En este ejemplo, los pelementos usarán la fuente Arial si está
+        disponible en la computadora del usuario. De lo contrario, el navegador
+        intentará usar la fuente Helvetica. Finalmente, si ninguna de esas
+        fuentes está disponible, el navegador recurrirá a una fuente sans-serif
+        genérica. Es importante tener en cuenta que los font-familyelementos
+        secundarios heredan la propiedad, por lo que puede establecer la familia
+        de fuentes en un elemento principal y todos sus elementos secundarios
+        usarán la misma fuente de forma predeterminada.
+      </dl>
+      <dl>Ejemplo</dl>
+      <div class="font">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quasi ad
+        repellat sunt iste numquam autem, officiis vel, neque molestiae id
+        incidunt excepturi. Soluta laudantium dicta autem deleniti minus eaque.
+      </div>
+
+      <div class="chalet">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam esse
+        possimus, dolorum nulla consequuntur corporis velit similique quia
+        voluptas porro? Quo iure vitae tempora non quaerat, beatae impedit quas
+        qui?
+      </div>
+      <br />
+      <div class="pecita">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus laborum
+        quibusdam voluptatem asperiores dolor inventore voluptatum perspiciatis
+        tempore blanditiis porro veritatis, fugit repellat quisquam autem iusto,
+        hic, similique dolores quam!
+      </div>
+      <br /><br /><br />
+      <h3>Font display</h3>
+      <dl>
+        La propiedad <b>font-display</b> en CSS se usa para controlar cómo se
+        muestra una fuente web mientras se carga. La propiedad le permite
+        especificar un comportamiento alternativo para la fuente en caso de que
+        no esté disponible de inmediato.
+      </dl>
+      <dl>La font-displaypropiedad toma uno de los siguientes valores:</dl>
+      <dl>
+        <b>auto:</b> este es el valor predeterminado y significa que el
+        navegador elegirá el mejor comportamiento en función de su configuración
+        predeterminada. Esto generalmente significa que el navegador ocultará el
+        texto hasta que se cargue la fuente, para evitar cualquier "destello de
+        texto sin estilo" (FOUT).
+      </dl>
+      <dl>
+        <b>block: </b> este valor obliga al navegador a ocultar el texto hasta
+        que se cargue la fuente, al igual que auto. Sin embargo, también asegura
+        que el texto permanezca oculto durante el tiempo que la fuente tarde en
+        cargarse. Esto puede ayudar a evitar cambios de diseño y mantener una
+        experiencia de usuario uniforme.
+      </dl>
+      <dl>
+        <b>swap: </b>este valor le dice al navegador que use inmediatamente una
+        fuente alternativa (generalmente una fuente del sistema) hasta que se
+        cargue la fuente personalizada. Esto puede evitar FOUT y garantizar que
+        el texto sea legible, pero es posible que la fuente alternativa no se
+        vea tan bien como la fuente personalizada.
+      </dl>
+      <dl>
+        <b>fallback: </b> este valor es similar a swap, pero permite que el
+        navegador use una fuente similar a la fuente personalizada, en lugar de
+        una fuente alternativa genérica. Esto puede ayudar a mantener un diseño
+        y una experiencia de usuario coherentes.
+      </dl>
+      <dl>
+        <b>optional: </b>este valor le dice al navegador que use la fuente
+        personalizada si está disponible, pero que no espere a que se cargue. En
+        su lugar, el navegador utilizará inmediatamente una fuente alternativa.
+        Esto puede ayudar a acelerar los tiempos de carga de la página y reducir
+        el riesgo de cambios de diseño.
+      </dl>
+      <hr />
+    </article>
+    <a href="index.html#temario-css">☝️</a>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>

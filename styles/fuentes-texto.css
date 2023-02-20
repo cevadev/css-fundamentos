@@ -1,0 +1,28 @@
+.font{
+    font-family: sans-serif;
+    font-weight: 900;
+    font-variant: small-caps;
+    line-height: 2.5;
+}
+
+@font-face {
+    font-family: "Chalet";
+    font-display: swap;    
+    /*src: url("../assets/Chalet.woff")format("woff"),
+         url("../assets/Chalet2.woff")format("woff2");*/
+    src: url("../assets/Chalet.woff")format("woff");
+}
+
+@font-face {
+    font-family: "Pecita";
+    font-display: swap;
+    src: url("../assets/Pecita.woff")format("woff");
+}
+
+.chalet{
+    font-family: "Chalet", sans-serif;
+}
+
+.pecita{
+    font-family: "Pecita", cursive;
+}

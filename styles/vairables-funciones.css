@@ -36,3 +36,12 @@ html{
     width: calc(var(--num-ch) + var(--padding-size) * 2);
 }
 
+.min-max{
+    background-color: var(--default-bg-color);
+    width: min(300px, 20vh);
+    height: max(200px, 25vh);
+}
+
+h1{
+    font-size: clamp(2rem, 1rem + 3vw, 3rem);
+}

@@ -82,6 +82,81 @@
       </dl>
       <dl>Ejemplo:</dl>
       <div class="ch-10">0123456789</div>
+      <br /><br />
+      <h3>Funcion min() max()</h3>
+      <dl>
+        En CSS, las funciones min()y max()se utilizan para especificar un valor
+        que es el resultado de una comparación entre dos o más valores. Estas
+        funciones se pueden usar en varias propiedades de CSS, como ancho, alto,
+        tamaño de fuente, relleno, margen y más.
+      </dl>
+      <dl>
+        min(): Esta función se utiliza para especificar el valor mínimo entre
+        dos o más valores. La sintaxis de la min()función es:
+      </dl>
+      <dl>
+        <b>
+          <code> min(value1, value2, value3, ...) </code>
+        </b>
+      </dl>
+      <dl>
+        La min()función devuelve el valor más pequeño de los valores
+        proporcionados. Por ejemplo, si usa min(100px, 50px, 200px), la función
+        devolverá 50px.
+      </dl>
+      <dl>
+        max(): Esta función se utiliza para especificar el valor máximo entre
+        dos o más valores. La sintaxis de la max()función es:
+      </dl>
+      <dl>
+        <code><b> max(value1, value2, value3, ...) </b></code>
+      </dl>
+      <dl>
+        La max()función devuelve el valor más grande de los valores
+        proporcionados. Por ejemplo, si usa max(100px, 50px, 200px), la función
+        devolverá 200px.
+      </dl>
+      <dl>
+        Estas funciones se pueden usar con cualquier propiedad CSS que tome un
+        valor, como ancho, alto, tamaño de fuente, relleno, margen y más. Por
+        ejemplo, puede usar max-widthpara establecer un ancho máximo para un
+        elemento o min-heightpara establecer una altura mínima para un elemento.
+        Ejemplos
+      </dl>
+      <dl><code>width: min(100px, 100%);</code></dl>
+      <dl><code>width: min(100px, 100%);</code></dl>
+      <dl><code>padding: max(10px, min(5px, 50%));</code></dl>
+      <dl>Ejemplos:</dl>
+      <div class="min-max">Funciones min() & max()</div>
+      <br /><br />
+
+      <h3>Funcion clamp()</h3>
+      <dl>
+        La funcion clamp() una función matemática que se usa para establecer un
+        valor entre un valor mínimo y máximo, con un valor preferido en el
+        medio. La clamp()función toma tres argumentos:
+      </dl>
+      <dl><code> clamp(minimum, preferred, maximum) </code></dl>
+      <dl>
+        El primer argumento minimumes el valor mínimo que puede tomar la
+        propiedad, el segundo argumento es el valor preferido y el tercer
+        argumento maximum es el valor máximo que puede tomar la propiedad.
+      </dl>
+      <dl>
+        La clamp()función se usa comúnmente para establecer el tamaño de un
+        elemento de manera que se adapte al tamaño de su contenedor o al tamaño
+        de la ventana gráfica. Por ejemplo, si desea que un elemento tenga un
+        ancho mínimo de 100 px, un ancho preferido del 50 % y un ancho máximo de
+        300 px, puede usar el siguiente código CSS:
+      </dl>
+      <dl><code> width: clamp(100px, 50%, 300px); </code></dl>
+      <dl>
+        Esto establecerá que el ancho del elemento sea el 50 % del ancho de su
+        contenedor, siempre que esté entre 100 px y 300 px. Si el ancho del
+        contenedor es inferior a 100 px, el ancho del elemento se establecerá en
+        100 px. Si el ancho del contenedor es mayor que 300 px, el ancho del
+        elemento se establecerá en 300 px.
+      </dl>
     </article>
     <a href="index.html#temario-css">☝️</a>
     <hr />
