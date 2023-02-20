@@ -109,6 +109,99 @@
         <div class="height-child"></div>
       </div>
       <br />
+
+      <h2>Viewport Units</h2>
+      <h3>Viewport Width (vw)</h3>
+      <dl>
+        En CSS, el "ancho de la ventana gráfica" (también conocido como "vw") es
+        una unidad de medida que representa un porcentaje del ancho de la
+        ventana del navegador. Por ejemplo, si la ventana del navegador tiene
+        1000 píxeles de ancho y establece el ancho de un elemento en 50vw, el
+        ancho del elemento será de 500 píxeles (50% del ancho de la ventana).
+      </dl>
+      <dl>
+        El ancho de la ventana gráfica puede ser útil para crear diseños
+        responsivos que se adapten a diferentes tamaños de pantalla. Al usar el
+        ancho de la ventana gráfica para establecer los tamaños de los
+        elementos, puede asegurarse de que se ajustarán proporcionalmente a
+        medida que el usuario cambie el tamaño de la ventana del navegador o vea
+        la página en diferentes dispositivos.
+      </dl>
+
+      <h3>Viewport Height</h3>
+      <dl>
+        El viewport height (también conocida como "vh") es una unidad de medida
+        que representa un porcentaje de la altura de la ventana del navegador.
+        Por ejemplo, si la ventana del navegador tiene una altura de 800 píxeles
+        y establece la altura de un elemento en 50vh, la altura del elemento
+        será de 400 píxeles (50 % de la altura de la ventana).
+      </dl>
+      <dl>
+        El viewport height puede ser útil para crear diseños receptivos que se
+        ajusten a diferentes tamaños de pantalla. Al usar la altura de la
+        ventana gráfica para establecer los tamaños de los elementos, puede
+        asegurarse de que se ajustarán proporcionalmente a medida que el usuario
+        cambie el tamaño de la ventana del navegador o vea la página en
+        diferentes dispositivos.
+      </dl>
+      <dl>Ejemplo:</dl>
+      <div class="viewport">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae sit iste
+        officia quis tempore est in doloribus ipsam at numquam! Omnis sed
+        exercitationem cumque rem officiis repellat culpa asperiores. Labore.
+      </div>
+      <br />
+
+      <h3>VMax</h3>
+      <dl>
+        La unidad "vmax" en CSS es una unidad de longitud relativa que
+        representa la mayor altura o anchura de la ventana gráfica. Por ejemplo,
+        si la ventana gráfica tiene 800 px de ancho y 600 px de alto, entonces
+        1vmax sería igual a 8 px (el mayor entre 800 px y 600 px). Del mismo
+        modo, 50vmax sería igual a 400px (50 por 8px).
+      </dl>
+      <dl>
+        La unidad "vmax" puede ser útil para crear diseños responsivos que se
+        adapten tanto al ancho como al alto de la ventana gráfica. Se puede
+        utilizar para establecer tamaños de fuente, márgenes, relleno y otras
+        dimensiones.
+      </dl>
+
+      <h3>VMin</h3>
+      La unidad "vmin" en CSS es una unidad de longitud relativa que representa
+      la menor altura o anchura de la ventana gráfica. Por ejemplo, si la
+      ventana gráfica tiene 800 px de ancho y 600 px de alto, entonces 1vmin
+      sería igual a 6 px (el menor de 800 px y 600 px). Del mismo modo, 50vmin
+      sería igual a 300px (50 veces 6px).
+      <dl>
+        La unidad "vmin" puede ser útil para crear diseños responisvos que se
+        adapten tanto al ancho como al alto de la ventana gráfica. Se puede
+        utilizar para establecer tamaños de fuente, márgenes, relleno y otras
+        dimensiones.
+      </dl>
+      <dl>Ejemplo:</dl>
+      <div class="vmax">Caja viewmax</div>
+      <div class="vmin">Caja viewmin</div>
+      <br />
+
+      <h3>Cuando usar cada unidad de medida</h3>
+      <dl>
+        <b>Medidas absolutas: </b>Usamos estas medidas cuando diseñamos una
+        pagina que se va a imprimir
+      </dl>
+      <dl>
+        <b>Medidas relativas: </b>Todo lo que tiene que ver con tipografia y
+        padding, margin etc usar rem. Si queremos un efecto de medidas por
+        ejemplo un card small medium large y que las distancias sean
+        proporcionales alli podemos usar ems. CHs cada ch representa un
+        caracter. Si necesitamos que un contenedor tenga la dimension de cierta
+        cantidad de caracteres entonces podemos usar CHs. Las medidas de
+        porcentajes se utilizan en el diseño responsivo.
+      </dl>
+      <dl>
+        <b>View port</b>Se utilizan para conseguir el efecto de pantalla
+        completa o na hero image
+      </dl>
       <a href="index.html#temario-css">☝️</a>
     </article>
     <hr />

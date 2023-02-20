@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/vairables-funciones.css" />
+    <title>Variables y Funciones</title>
+  </head>
+  <body>
+    <article>
+      <h2>Custom Properties</h2>
+      <dl>
+        Las propiedades personalizadas, también conocidas como variables CSS,
+        son una forma de definir y reutilizar valores en CSS. Se declaran
+        utilizando el --prefijo seguido de un nombre y un valor. Por ejemplo:
+      </dl>
+      <dl><code> :root { --main-color: #ff0000; } </code></dl>
+      <dl>
+        En este ejemplo, estamos definiendo una propiedad personalizada
+        denominada --main-colory dándole un valor de #ff0000(que es rojo). Una
+        vez que se define una propiedad personalizada, se puede usar en
+        cualquier lugar de la hoja de estilo haciendo referencia a ella mediante
+        la var()función. Por ejemplo:
+      </dl>
+      <dl><code>body { background-color: var(--main-color); } </code></dl>
+      <dl>
+        Este código establece el color de fondo del bodyelemento en el valor de
+        la --main-colorpropiedad personalizada. Si tuviéramos que cambiar el
+        valor de --main-colormás adelante en la hoja de estilo, el color de
+        fondo se actualizaría automáticamente.
+      </dl>
+      <dl>Ejemplos:</dl>
+      <dl>
+        <article class="custom-props1">
+          <section class="custom/props2">
+            <div class="custom-props3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+              tempora rerum similique illo esse laborum ducimus asperiores
+              excepturi sed. Laboriosam laudantium reprehenderit accusantium
+              illo aperiam provident voluptatum! Sapiente, sit iste.
+            </div>
+          </section>
+        </article>
+      </dl>
+      <br />
+    </article>
+    <a href="index.html#temario-css">☝️</a>
+    <hr />
+    <article>
+      <h2>Funciones en CSS</h2>
+      <h3>Funcion url()</h3>
+      <dl>
+        La url()función en CSS se usa para especificar un recurso, como una
+        imagen o un archivo de fuente, que debe usarse para una propiedad CSS en
+        particular. La función toma un único argumento, que es la URL del
+        recurso que se utilizará. Aquí hay un ejemplo de cómo url()se puede usar
+        la función para establecer la imagen de fondo de un elemento:
+      </dl>
+      <dl>
+        <code
+          >.my-element { background-image: url('path/to/image.jpg'); }
+        </code>
+      </dl>
+      <dl>
+        En este ejemplo, la url()función se usa para especificar la ruta a un
+        archivo de imagen que debe usarse como imagen de fondo para el
+        .my-elementelemento. La url()función también se puede usar en otros
+        lugares, como en la @font-faceregla para especificar la URL de un
+        archivo de fuente que se usará en una página web.
+      </dl>
+      <dl>
+        Es importante tener en cuenta que la URL especificada en la url()función
+        es relativa a la ubicación del archivo CSS, no al archivo HTML. Esto
+        significa que si el archivo CSS y el archivo de imagen están en carpetas
+        diferentes, la URL debe tener esto en cuenta. Por ejemplo, si el archivo
+        de imagen está en una subcarpeta de la carpeta donde se encuentra el
+        archivo CSS, la URL se vería así:
+      </dl>
+      <dl>
+        <code>.my-element { background-image: url('images/image.jpg'); } </code>
+      </dl>
+      <dl>Ejemplo:</dl>
+      <div class="ch-10">0123456789</div>
+    </article>
+    <a href="index.html#temario-css">☝️</a>
+    <hr />
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>

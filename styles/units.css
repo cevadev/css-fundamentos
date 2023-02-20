@@ -3,6 +3,10 @@ html{
     box-sizing: border-box;
 }
 
+body{
+    margin: 0;
+}
+
 *,
 *::after,
 *::before{
@@ -87,4 +91,26 @@ html{
     /*definimos tamanio del 50% con respecto a su contenedor div*/
     width: 50%;
     height: 50%;
+}
+
+/*Viewport Units*/
+.viewport{
+    background-color: coral;
+    width: 50vw;
+    /*recordar que etiqueta body posee margenes por defecto por ello habra un desbordamiento, asi como las barras de scrool
+      forman parte de view port. solucion: quitarle los margenes al body*/
+    width: 100vw;
+    width: 100%;
+    height: 100vh;
+    /*texto responsivo*/
+    font-size: 1.8vw;
+    padding: 2vh 3vw;
+}
+
+.vmin,
+.vmax{
+    background-color: burlywood;
+    border: thick solid orangered;
+    width: 50vmax;
+    height: 50vmin;
 }

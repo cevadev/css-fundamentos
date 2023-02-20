@@ -1,0 +1,38 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+/*definiendo para variables aplicables para todos los elementos html*/
+/*pseudoclase :root hace referencia a la etiqueta html*/
+/*html tiene especificidad 1 mientras que :root tiene especificidad de 10*/
+:root{
+    background-color: papayawhip;
+    --default-bg-color:cyan;
+}
+
+.custom-props1{
+    --primary-color: gray;
+    --font-size: 32px;
+    background-color: var(--primary-color);
+}
+
+/*los elementos hijos pueden heredar el valor de las variables definidas en elementos padres*/
+.custom-props3{
+    font-size: var(--font-size);
+}
+
+.ch-10{
+    --padding-size: 2ch;
+    --num-ch : 10ch;
+    background-color: var(--default-bg-color);
+    font-size: 2rem;
+    padding: var(--padding-size);
+    width: calc(var(--num-ch) + var(--padding-size) * 2);
+}
+
