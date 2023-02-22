@@ -26,3 +26,33 @@
 .pecita{
     font-family: "Pecita", cursive;
 }
+
+.raleway{
+    font-family: "raleway", sans-serif;
+    font-size: 2rem;
+}
+
+.text{
+    background-color: salmon;
+    border: thin solid black;
+    padding: 1rem;
+    width: 50%;
+    font-size: 2rem;
+    text-align: left;
+    text-indent: 1rem;
+}
+
+.text a{
+    text-decoration: none;
+}
+
+.text-overflow{
+    background-color: papayawhip;
+    border: thin solid black;
+    padding: 1rem;
+    font-size: 2rem;
+    width: 50%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
