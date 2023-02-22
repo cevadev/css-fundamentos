@@ -40,6 +40,8 @@
     font-size: 2rem;
     text-align: left;
     text-indent: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 1rem;
 }
 
 .text a{
