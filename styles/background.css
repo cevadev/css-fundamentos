@@ -1,0 +1,63 @@
+.box {
+    color: aliceblue;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: 2rem auto;
+    border: thick dashed darkgreen;
+}
+
+.bg-color{
+    background-color: black;
+}
+
+.bg-image{
+    background-image: url("../assets/puesta-sol.jpg");
+}
+
+.bg-size{
+    background-image: url("../assets/puesta-sol.jpg");
+    background-size: 300px 200px;
+    background-size: 300px;
+    /*se asegura que se cubra toda la caja contenedora pero no garantiza que se vea toda la imagen*/
+    background-size: cover;
+    /*se asegura que toda la imagen se visualice en el contenedor pero puede quedar partes vacias en el contenedor*/
+    background-size: contain;
+}
+
+.bg-repeat{
+    background-image: url("../assets/puesta-sol.jpg");
+    background-size: 100px;
+    background-repeat: repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: no-repeat;
+}
+
+.bg-position{
+    background-color: aqua;
+    background-image: url("../assets/puesta-sol.jpg");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: 10px 20px;
+    background-position: 1rem 2rem;
+    background-position: 10% 20%;
+    background-position: 10%;
+    background-position: 10% center;
+    background-position: top center;
+    background-position: top right;
+    background-position: bottom left;
+}
+
+/*bg-clip define cuanto va a extenderse el fondo dentro del elemento*/
+.bg-clip{
+    background-color: aqua;
+    background-image: url("../assets/puesta-sol.jpg");
+    background-size: 200px;
+    background-repeat: no-repeat;
+    /*el color de fondo inicia desde el padding*/
+    background-clip: padding-box;
+    padding: 1rem;
+    /*el color de fondo inicia desde el contenido*/
+    background-clip: content-box;
+}
