@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/forms.css" />
+    <title>Estilos a Formularios</title>
+  </head>
+  <body>
+    <h1>Estilo a formularios</h1>
+    <form
+      action="https://formsubmit.co/barcvilla@gmail.com"
+      method="POST"
+      target="_blank"
+      class="contact-form"
+    >
+      <legend>Envíanos tus comentarios</legend>
+      <input
+        type="text"
+        name="name"
+        placeholder="Escribe tu nombre"
+        title="Nombre solo acepta letras y
+           espacios en blanco"
+        required
+        pattern="^[A-Za-zÑñÁÉÍÓÚáéíóúü\s]+$"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Escribe tu correo"
+        title="Email incorrecto"
+        required
+        pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+      />
+      <textarea
+        name="comments"
+        cols="50"
+        rows="5"
+        placeholder="Escribe tus comentarios"
+        required
+        data-pattern="^.{1,255}$"
+        title="Tu comentario no puede superar los 255 caracteres"
+      ></textarea>
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <br /><br />
+    <a href="index.html#temario-css">☝️</a>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>

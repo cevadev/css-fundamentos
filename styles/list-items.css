@@ -28,3 +28,20 @@
     list-style-position: outside;
     list-style-position: inside;
 }
+
+.text-column-4{
+    list-style-position: inside;
+    column-count: 4;
+    column-gap: 2rem;
+    column-rule: medium dashed salmon;
+    /*tamano minimo de ancho de la columna*/
+    column-width: 100px;
+}
+
+.text-column-5 {
+    column-count: 4;
+    column-gap: 2rem;
+    column-rule: medium solid gray;
+    /*tamano minimo de ancho de la columna*/
+    column-width: 100px;
+}

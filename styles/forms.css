@@ -1,0 +1,37 @@
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+.contact-form{
+    /*Las variables trabajan en scope es decir del selector donde se definio hacia sus hijos internos*/
+    --form-text-color: #333;
+    --form-sucess-color: #4caf50;
+    --form-error-color : #f44336;
+    --form-bg-color: #EEE;
+    --form-border-color: #222;
+    
+    background-color: var(--form-bg-color);
+    border: thin solid var(--form-border-color);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 2rem;
+}
+
+/*dentro de contact-form a todos los elementos html que sean hijos directos*/
+.contact-form > *{
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+    padding: .5rem;
+    border-radius: .35rem;
+}
