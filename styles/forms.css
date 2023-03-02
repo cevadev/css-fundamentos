@@ -16,6 +16,7 @@ html{
     --form-error-color : #f44336;
     --form-bg-color: #EEE;
     --form-border-color: #222;
+    --form-placeholder-color: #006999;
     
     background-color: var(--form-bg-color);
     border: thin solid var(--form-border-color);
@@ -34,4 +35,43 @@ html{
     font-size: 1rem;
     padding: .5rem;
     border-radius: .35rem;
+    color: var(--form-text-color);
+    /*color del cursor*/
+    caret-color: var(--form-placeholder-color);
+}
+
+/*estilos a los placeholder a todos los elementos dentro del contact-form que son hijos directos*/
+.contact-form > *::placeholder{
+    color: var(--form-placeholder-color);
+}
+
+/*estilos a los hijos directos de .contact-form que tengas la pseudoclase invalid y el atributo required*/
+.contact-form > *[required]:invalid{
+    border: thin solid var(--form-error-color);
+}
+
+.contact-form > *[required]:valid{
+    border: thin solid var(--form-sucess-color);
+}
+
+.contact-form input[type="submit"]{
+    margin-bottom: 0px;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--form-placeholder-color);
+    font-weight: bold;
+    color: white;
+    font-size: 1.25rem;
+}
+
+/*aplicamos estilos al boton en estado hover*/
+.contact-form input[type="submit"]:hover{
+    cursor: pointer;
+    opacity: 75%;
+}
+
+/*impedimos que se redimensione el textarea*/
+.contact-form textarea{
+    resize: none;
 }
