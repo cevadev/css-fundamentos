@@ -1,0 +1,30 @@
+.list{
+    list-style-type: disc; /*por defecto */
+    list-style-type: square;
+    list-style-type: circle;
+    list-style-type: lower-greek;
+    list-style-type: lower-roman;
+}
+
+/*reemplazando vinetas por defecto*/
+.list li{
+    list-style-type: none;
+}
+
+/*asignando imagenes como vinetas*/
+.list li::before{
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-image: url("../assets/favicon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.list-2 li{
+    background-color: coral;
+    list-style-position: outside;
+    list-style-position: inside;
+}
