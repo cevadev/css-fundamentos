@@ -82,4 +82,87 @@ html{
     background-image: linear-gradient(to top left, red, green, blue);
     background-image: linear-gradient(to top right, red, green, blue);
     background-image: linear-gradient(to bottom right, red, green 60%, blue);
+    /*creando banderas*/
+    background-image: linear-gradient(90deg, green 33%, white 34% 67%, red 68%);
+}
+
+.radial-gradient{
+    background-image: radial-gradient(cyan, magenta);
+    background-image: radial-gradient(cyan, magenta, yellow);
+    background-image: radial-gradient(circle 4rem, cyan, magenta, yellow);
+    background-image: radial-gradient(circle 4rem, cyan 30%, magenta 80%, yellow);
+    background-image: radial-gradient(circle 100px, cyan 30%, magenta 60%, yellow 90%);
+    background-image: radial-gradient(circle 100px at top, cyan 30%, magenta 60%, yellow 90%);
+    background-image: radial-gradient(circle 100px at bottom, cyan 30%, magenta 60%, yellow 90%);
+    background-image: radial-gradient(circle 100px at left, cyan 30%, magenta 60%, yellow 90%);
+    background-image: radial-gradient(circle 100px at top left, cyan 30%, magenta 60%, yellow 90%);
+    background-image: radial-gradient(ellipse 100px 50px at center, cyan 30%, magenta 60%, yellow 90%);
+}
+
+.conic-gradient{
+    background-image: conic-gradient(red, green, blue);
+    background-image: conic-gradient(red 0% 50%, green 60%, blue 80%);
+    background-image: conic-gradient(red 0deg 90deg, green 120deg, blue 120deg 240deg);
+    background-image: conic-gradient(from 90deg, red 0deg 90deg, green 120deg 240deg, blue 270deg);
+    background-image: conic-gradient(from 180deg, red 0deg 90deg, green 120deg 240deg, blue 270deg);
+    background-image: conic-gradient(from 90deg, red 0deg 120deg, white 120deg 240deg, blue 240deg);
+}
+
+.repeat-gradient-linear{
+    background-image: repeating-linear-gradient(red 0 10px, green 10px 20px, blue 20px 30px);
+    background-image: repeating-linear-gradient(90deg, red 0 10px, green 10px 20px, blue 20px 30px);
+    background-image: repeating-linear-gradient(45deg, red 0 10px, green 10px 20px, blue 20px 30px);
+}
+
+.repeat-gradient-radial{
+    background-image: repeating-radial-gradient(circle 4rem, cyan 0 10px, magenta 10px 20px, yellow 20px 30px);
+}
+
+.repeat-gradient-conic{
+    background-image: repeating-conic-gradient(red 0 8%, yellow 8% 16%, black 16% 24%);
+}
+
+.chart-gradient{
+    background-image: conic-gradient(cyan 0% 50%, magenta 50% 80%, yellow 80%);
+    border-radius: 50%;
+}
+
+.donut-gradient{
+    background-image: radial-gradient(white 30%, black 31%, transparent 33%), conic-gradient(cyan 0% 50%, magenta 50% 80%, yellow 80%);
+    border-radius: 50%;
+}
+
+.card {
+    border: thick solid #000;
+    width: 600px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0% 50%;
+
+    /*aplicando filtros*/
+    filter: blur(0.12rem);
+    filter: brightness(0.75);
+    filter: brightness(0.35);
+    filter: contrast(0.5);
+    filter: contrast(0.75);
+    filter: grayscale(0.25);
+    filter: grayscale(0.65);
+    filter: sepia(0.75);
+    filter: sepia(0.25);
+    filter: hue-rotate(30deg);
+    filter: hue-rotate(60deg);
+    filter: hue-rotate(90deg);
+    filter: invert(0.18);
+    filter: invert(0.35);
+    filter: opacity(0.80);
+    filter: saturate(0);
+    filter: saturate(0.75);
 }
