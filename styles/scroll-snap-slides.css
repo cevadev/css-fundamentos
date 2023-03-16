@@ -89,3 +89,17 @@ body{
     background-color: #1E2345;
 }
 
+.gradient-text{
+    background-image: linear-gradient(45deg, magenta, yellow);
+    /*defenimos desde donde inicia el fondo, el text no esta soportado por todos los navegadores
+      con el valor text, significa que el fondo se va a adaptar al texto de la caja
+      contenedora.*/
+    -ms-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -ms-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
