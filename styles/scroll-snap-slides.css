@@ -51,3 +51,41 @@ body{
     font-size: 3vw;
     color: #d9e8f0;
 }
+
+.carousel{
+    display: flex;
+    border: thick solid #9D38F0;
+    /* dimensiones al 50% de su contendor*/
+    width: 50%;
+    height: 50vh;
+    overflow-x: hidden;
+}
+
+.carousel-container{
+    /*ancho 100% de su contenedor*/
+    width: 100%;
+    /*alineado de slide en horizontal con GRID. cada slide ocupara una columna al 100%*/
+    display: grid;
+    grid-template-columns: repeat(5, 100%);
+    overflow-x: scroll;
+    /*evitamos que aparezca la barra de scroll vertical*/
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-type: inline mandatory;
+    scroll-snap-type: both proximity;
+    scroll-snap-type: both mandatory;
+}
+
+.carousel-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #108eb4;
+    scroll-snap-align: center;
+}
+
+.carousel-slide:nth-child(even){
+    background-color: #1E2345;
+}
+
