@@ -1,0 +1,70 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.box {
+    border: thin solid #000;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+}
+
+.card {
+    border: thick solid #000;
+    width: 600px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0% 50%;
+}
+
+/*
+Transiciones
+    transition-property
+    transition-duration
+    transition-timing-function: none linear ease ease-in ease-out ease-in-out steps
+    transition-delay
+    transition: property duration timing-function delay
+*/
+.transitions .box{
+    background-color: magenta;
+    /*indicamos la propiedad que queremos modificar*/
+    transition-property: background-color;
+    /*duracion de la transicion*/
+    transition-duration: 500ms;
+    /*tipo de la aceleracion: elegimos aceleracion general*/
+    transition-timing-function: ease;
+    /*aplicamos delay a la transicion, que espere medio segundo y luego inicie la transicion */
+    transition-delay: 0.5s;
+    /*modificamos la propiedad border-color, que dure 3 segundos, que sea un efecto de animacion lineal
+      con un delay de 1 segundo*/
+    transition: border-color 3s linear 1s;
+
+    /*aplicamos estilos a todas las propiedades que se puedan animar, en nuestro caso se aplicaran a background-color y
+      border-color y border-radius. Una duracion de 2 segundos con un efecto de aceleracion ease-in-out, con un delay de 
+      250ms*/
+    transition: all 2s ease-in-out 250ms;
+}
+
+.transitions .box:hover{
+    background-color: cyan;
+    border-color: red;
+    border-radius: 2rem;
+}
