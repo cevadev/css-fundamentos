@@ -45,6 +45,7 @@ Transiciones
 */
 .transitions .box{
     background-color: magenta;
+    border-color: green;
     /*indicamos la propiedad que queremos modificar*/
     transition-property: background-color;
     /*duracion de la transicion*/
@@ -60,11 +61,115 @@ Transiciones
     /*aplicamos estilos a todas las propiedades que se puedan animar, en nuestro caso se aplicaran a background-color y
       border-color y border-radius. Una duracion de 2 segundos con un efecto de aceleracion ease-in-out, con un delay de 
       250ms*/
-    transition: all 2s ease-in-out 250ms;
+    /*transition: all 2s ease-in-out 250ms;*/
+
+    /*en lugar de hacer un .transition: all vamos aplicar transiciones a cada propiedad*/
+    transition: background-color 2s ease-in-out 250ms,
+     border-color 2s ease-in-out 250ms,
+     border-radius 2s ease-in-out 250ms;
 }
 
 .transitions .box:hover{
     background-color: cyan;
     border-color: red;
     border-radius: 2rem;
+    /*no todas las propiedades son animable como border styles*/
+    /*border-style: dashed;*/
+}
+
+.transitions .card{
+    /*aplicamos la transition a cada propiedad una por una*/
+    transition: opacity 1s ease-out, 
+     border-color 3s steps(3),
+     filter 2s ease-in 1s,
+     box-shadow 1.5s linear 2s;
+}
+
+.transitions .card:hover{
+    opacity: .75;
+    border-color: orchid;
+    filter: blur(.15rem);
+    box-shadow: 1rem 1rem 2rem .5rem #000;
+}
+
+/*animamos object-position en x de 0 a 100*/
+.transitions .card img{
+    /*delay de 3seg: primero realiza las animaciones de .transition .card*/
+    transition: object-position 2s ease-in-out 3s;
+}
+
+.transitions .card img:hover{
+    object-position: 100% 50%;
+}
+
+/*Transformaciones en 2D. Las transformaciones se haran sobre la imgaen que esta dentro de la card*/
+.transform-2d img{
+    /*animamos la propiedad transform*/
+    transition: transform .5s ease-in-out;
+}
+
+/*las transformaciones se aplicaran en el estado hover de la imagen*/
+.transform-2d img:hover{
+    transform: none;
+    /*movemos la imagen 4rem respecto de su posicion original en el eje X*/
+    transform: translateX(4rem);
+    /*movemos la imagen 4rem respecto de su posicion original en el eje Y*/
+    transform: translateY(4rem);
+    transform: translateY(-4rem);
+    /*translacion en el eje Z que es el nivel de profundidas*/
+    transform: translateZ(4rem);
+    /*shorthand translate*/
+    transform: translate(-4rem, 4rem);
+    transform: translate(-50%, -50%);
+    transform: scaleX(2);
+    transform: scaleY(.5);
+    transform: scaleZ(1.5);
+    /*shorthand scale X, Y*/
+    transform: scale(1.5, 1.5);
+    transform: scale(-1, -1);
+    transform: scale(-.5, -.5);
+
+    /*rotacion*/
+    transform: rotateX(60deg);
+    transform: rotateX(90deg);
+    transform: rotateY(90deg);
+    transform: rotateZ(60deg);
+    transform: rotateZ(-60deg);
+    transform: rotate(360deg);
+    transform: rotate(-360deg);
+    transform: skewX(20deg);/*izquiera*/
+    transform: skewX(-20deg);/*derechas*/
+    transform: skew(20deg, 20deg);
+
+    /*
+    funcion matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+    */
+    transform: matrix(1,2,2,1,20,10);
+
+    /*Transformaciones multiples en 2D*/
+    transform: translate(25%, -50%) rotate(240deg) skew(10deg, 20deg) scale(-.5, -.5);
+}
+
+/*aplicando la perspectiva para utilizar transformaciones en 3D*/
+.transform-3d{
+    perspective: 10rem;
+}
+
+/*Transformaciones en 3D
+  Para aplicar transformaciones en 3D es necesario activar la perspectiva
+  La erspectiva la podemos invocar desde el elemento padre del elemento al que quereos aplicar la tranformacion en 3D
+  por lo que para nuestro ejemplo podemos aplicar la perspectiva al elemento article
+  La segundo opcion es qu antes de aplicar la transicion podemos activar la perspectiva*/
+.transform-3d img{
+    transition: 1.3s ease-in-out;
+}
+
+.transform-3d img:hover{
+    transform: translateZ(4rem);
+    transform: perspective(1000px) translateZ(4rem);
+    transform: perspective(100rem) translateZ(4rem);
+    transform: perspective(1rem) translateZ(4rem);
+    transform: perspective(10rem) translateZ(4rem);
+    transform: perspective(10rem) translateZ(-4rem);
+    transform: translateZ(4rem);
 }
