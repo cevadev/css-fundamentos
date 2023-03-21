@@ -172,4 +172,182 @@ Transiciones
     transform: perspective(10rem) translateZ(4rem);
     transform: perspective(10rem) translateZ(-4rem);
     transform: translateZ(4rem);
+    /*2rem eje x hacia la derecha, 50% eje y hacia abajo y -3rem de profundidad eje z*/
+    transform: translate3d(2rem, 50%, -3rem);
+    transform: scale3d(2, .5, 3);
+    transform: rotateX(60deg);
+    transform: rotateY(60deg);
+    transform: rotate3d(1, 1, 1, 45deg);
+    transform: rotate3d(1, .5, 0, -45deg);
+    transform: rotate3d(-1, 2.5, -2, 60deg);
+    transform: matrix3d(1,0,0,0,0,1,6,0,0,0,1,0,50,100,0,1.1);
+    transform: rotate3d(-1, 2.5, -2, 60deg) translate3d(2rem, 50%, -3rem) scale3d(2, -.5, 3);
+}
+
+.transform-origin img{
+    transition: transform 2s ease-in-out;
+    /*transform-origin: x, y, z*/
+    transform-origin: 50% 50% 0;
+    transform-origin: 0 0;
+    transform-origin: 0;
+    transform-origin: top right;
+    transform-origin: left center;
+}
+
+.transform-origin img:hover{
+    transform: rotate(360deg);
+}
+
+/*a este elemento aplicamos la transformacion*/
+.flip-card-1,
+.flip-card-2 {
+    border: thick solid #000;
+    width: 600px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+
+    position: relative;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+    perspective: 10rem;
+    /*transform-style -> stablece si los hijos d un elemento que tiene perspectiva en 3 dimensiones
+      esta propiedad determina como se va a comportar en el espacio 3D*/
+      transform-style: flat;
+      transform-style: preserve-3d;
+}
+
+.flip-card-1 img,
+.flip-card-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0% 50%;
+}
+
+.flip-card-2{
+    transform-origin: center right;
+}
+
+.flip-card-1:hover{
+    transform: rotateY(180deg);
+}
+
+.flip-card-2:hover{
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.flip-face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: visible;
+    backface-visibility: hidden;
+}
+
+.flip-front{
+    transform: rotateY(0deg);
+}
+
+.flip-back{
+    transform: rotateY(180deg);
+}
+
+/* representacion de la linea de tiempo de myAwesomeAnimation */
+@keyframes myAwesomeAnimation {
+    /*toda animacion necesita un punto de entra y uno de salida*/
+    /* definimos el fotograma de inicio */
+    from{
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    /* definimos el fotograma final*/
+    to{
+        opacity: 1;
+        transform: translateX(100%);
+    }
+}
+
+.my-animation{
+    /*animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+    animation-name: myAwesomeAnimation;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(1,0,0,1);
+    animation-timing-function: cubic-bezier(.33, .92, .92, .36);
+    animation-timing-function: ease-in-out;
+    animation-delay: 150ms;
+    animation-delay: 0; /*sin delay*/
+    animation-iteration-count: 3; /*# de veces que se repetira la animacion*/
+    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    animation-direction: alternate;
+    animation-direction: alternate-reverse;
+    animation-direction: normal;
+    /*al final de la animacion se queda con los estilos finales de al animacion*/
+    animation-fill-mode: forwards;
+    /*al inicio de la animacion se queda con los estilos iniciales de la animacion*/
+    animation-fill-mode: backwards;
+    /*both -> aplica al mismo tiempo el valor de forwards y backwards*/
+    animation-fill-mode: both;
+    animation: myAwesomeAnimation 1.5s ease 250ms 6 alternate both running;
+}
+
+@keyframes myAwesomeAnimation2 {
+    0%{
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    50%{
+        opacity: 0.5;
+        transform: translateX(-50%);
+    }
+
+    75%{
+        transform: translateX(-75%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(100);
+    }
+}
+
+.my-animation-2{
+    animation: myAwesomeAnimation2 2s;
+}
+
+@keyframes multipleAnimation1 {
+    0%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes multipleAnimation2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animation-multiple{
+    animation: multipleAnimation1 2s infinite, multipleAnimation2 2s infinite;
 }
