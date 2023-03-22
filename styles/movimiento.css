@@ -351,3 +351,90 @@ Transiciones
 .animation-multiple{
     animation: multipleAnimation1 2s infinite, multipleAnimation2 2s infinite;
 }
+
+.motion-examples{
+    text-align: center;
+}
+
+@keyframes fadein {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.fade-in{
+    font-size: 5vw;
+    animation: fadein 2s linear infinite alternate;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-out{
+    font-size: 5vw;
+    animation: fadeout 2s linear infinite alternate;
+}
+
+@keyframes shake {
+    10%,
+    90%{
+        transform: translateX(-1px, 0);
+    }
+
+    20%,
+    80% {
+        transform: translateX(2px, 0);
+    }
+
+    30%,
+    50%,
+    70%{
+        transform: translate(-4px, 0);
+    }
+
+    40%,
+    60%{
+        transform: translate(4px, 0);
+    }
+}
+
+.shake{
+    font-size: 5vw;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.shake:hover{
+    animation: shake 1s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate(0,0);
+}
+
+@keyframes pulse {
+    0%{
+        transform: scale(1.1);
+    }
+
+    50%{
+        transform: scale(.8);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.pulse{
+    font-size: 5vw;
+    animation: pulse 2s linear infinite;
+}
