@@ -11,6 +11,10 @@ html {
     box-sizing: inherit;
 }
 
+body{
+    margin: 0;
+}
+
 .box {
     border: thin solid #000;
     width: 200px;
@@ -737,4 +741,109 @@ position: fixed;
 
 .off-canvas-link:hover{
     background-color: #a005;
+}
+
+.modal{
+    position: fixed;
+        /*con las posiciones 0 damos efecto de estiramiento y ocupara toda la pantalla */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #0008;
+        /*checkbox = 997, hamburger = 998 off-canvas-menu = 997*/
+    z-index: 997;
+    display: flex;
+        /*lo centramos en el eje principal respecto al elemento contenedor*/
+    justify-content: center;
+        /*centramos en el eje transversal*/
+    align-items: center;
+    transition: opacity 500ms ease-in-out;
+    opacity: 0;
+    /*aunque con opacity 0 los elemento no se ven pero estan en el dom y aun se 
+      converva su interactividad, para desactivar la interactividad*/
+      pointer-events: none;
+}
+
+/*cuando el elemento con la clase .modal posea el target de la url (#modal-1), la hacemos visible*/
+.modal:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+    border: thick double #d00;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 70%;
+    height: 70vh;
+    background-color: #fff;
+}
+
+.modal-close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 3rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #d00;
+    /*animamos el fondo y las transformacion*/
+    transition: background-color 300ms linear, transform 300ms ease-in-out;
+}
+
+.modal-close:hover{
+    background-color: #a00;
+    transform: scale(1.2);
+}
+
+@keyframes introStarWars {
+    0%{
+        transform: perspective(100vh) rotateX(15deg) translateY(100%);
+    }
+
+    100%{
+        transform: perspective(100vh) rotateX(25deg) translateY(-200%);
+    }
+}
+
+.star-wars{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: #ffb13a;
+    background-image: url("../assets/stars.gif");
+}
+
+.star-wars-container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: justify;
+    letter-spacing: 1rem;
+    animation: introStarWars 20s linear infinite;
+}
+
+.star-wars h2,
+.star-wars h3{
+    text-align: center;
+    font-size: 5vw;
+}
+
+.star-wars p{
+    font-size: 3vw;
+    line-height: 4rem;
 }
