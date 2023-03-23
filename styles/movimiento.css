@@ -680,3 +680,61 @@ position: fixed;
 .off-canvas-btn:checked+.off-canvas-burger::after {
     transform: rotate(-45deg) translate(.4rem, -.5rem);
 }
+
+/*estilos al menu off-canvas*/
+.off-canvas-menu{
+    position: fixed;
+    /*con las posiciones 0 damos efecto de estiramiento y ocupara toda la pantalla */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #0008;
+    /*checkbox = 997, hamburger = 998 off-canvas-menu = 997*/
+    z-index: 997;
+    display: flex;
+    /*lo centramos en el eje principal respecto al elemento contenedor*/
+    justify-content: center;
+    /*centramos en el eje transversal*/
+    align-items: center;
+    /*animamos la aparicion del menu*/
+    transition: transform 500ms ease-in-out;
+    /*colocamos al menu fuera del lienzo, y aparece desde arriba*/
+    transform: translate(0, -100%);
+    /*para que aparezca desde abajo*/
+    transform: translate(0, 100%);
+    /*para que aparezce desde la derecha*/
+    transform: translate(100%, 0);
+    /*para que aparezca desde la izquierda*/
+    transform: translate(-100%, 0);
+}
+
+/*cuando off-canvas-btn este checked, al hermano llamado off-canvas-menu le cambiamos la traslacion*/
+.off-canvas-btn:checked ~ .off-canvas-menu{
+    transform: translate(0, 0);
+}
+
+.off-canvas-menu-container{
+    display: flex;
+    /*por defecto es row*/
+    flex-direction: column;
+    justify-content: center;
+}
+
+.off-canvas-link{
+    padding: 2rem;
+    border-bottom: thin solid #d00;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 300ms ease;
+}
+
+.off-canvas-link:first-child{
+    border-top: thin solid #d00;
+}
+
+.off-canvas-link:hover{
+    background-color: #a005;
+}
