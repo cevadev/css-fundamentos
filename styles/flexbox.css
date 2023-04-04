@@ -1,0 +1,31 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: #333;
+    height: 30vh;
+
+
+    /*display flex es una caja flexible qe teabaja en bloque*/
+    /*por defecto la direccion de ua caja flexbox es horizontal es decir en fila*/
+    /*si queremos aliniar varias cajas en una misma linea, usamos la propiedad inline-flex*/
+    /*inline-flex permite que los contenedores flexbox en lugar de comportarse en bloque sean en linea*/
+    /*un componente en linea solo ocupa unicamente el ancho que necesita*/
+    display: flex; /*or inline-flex*/
+    /*con la propiedad row, el eje principal es x pero con la propiedad column, el eje principal es y*/
+    /*con la propiedad row, aplica la propiedad width de cada item*/
+    /*con la propiedad column, la propiedad que rige el tamanio es height*/
+    flex-direction: column; /*or column-reverse, row, row-reverse*/
+    /*flex-wrap: el contenedor intentara alinear a tods sus hijos en una sola linea*/
+    flex-wrap: wrap;
+    /*short-cut*/
+    flex-flow: column nowrap;
+}
+
+.item{
+    background-color: #666;
+    width: 20%;
+    height: 20%;
+    border: thin solid #999;
+}
