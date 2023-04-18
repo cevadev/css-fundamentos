@@ -125,3 +125,55 @@ img {
     grid-row: 1 / span 3;
     grid-column: span 2;
 }
+
+/* Aplicando nombres a las lineas del Grid */
+.grid-line-names{
+    display: grid;
+    /* Grid 3c x 3r*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    /* al tener una grid de 3x3 tenemos 4 lineas rows y 4 lineas column. Para
+       nombrar a las lineas, colocamos un []*/
+    grid-template-columns: [linea-c1]1fr [linea-c2]1fr [linea-c3]1fr [linea-c4]1fr;
+    grid-template-rows: [linea-r1]1fr [linea-r2]1fr [linea-r3]1fr [linea-r4]1fr;
+}
+
+.grid-line-names .item:nth-child(3){
+    color: magenta;
+    /* item3, se va a posicionar en el item7 y ocupara 3 columnas */
+    grid-row: linea-r3/linea-r4;
+    grid-column: linea-c1/linea-c4;
+}
+
+/* posicionamiento con grid areas */
+.grid-areas{
+    display: grid;
+    /* Grid 2c x 3r*/
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 100px repeat(2, 1fr) 50px;
+
+    grid-template-areas: 
+    /* el . en grid define a la celda como vacia*/
+        "header header"
+        "content sidebar"
+        "content ."
+        "footer footer";
+}
+
+/* como cada elemento tienen una clase enlazamos la clase con los nombres del grid-template-areas*/
+.header{
+    grid-area: header;
+}
+
+.content{
+    grid-area: content;
+}
+
+.sidebar{
+    grid-area: sidebar;
+}
+
+.footer{
+    grid-area: footer;
+}
