@@ -2,10 +2,19 @@
     box-sizing: border-box;
 }
 
+/*
+Flexbox es un sistema unidireccional, es decir solo puede tener filas o columnas
+Flex container: contiene a los elementos hijos
+Flex item: elementos a los que se le aplica el comportamiento de flexbox
+Main Axia: o eje principal 
+Cross axis: o eje transversal o secundario.
+Aunque por defecto el main axis es el eje X y el transversal es el eje Y con una propiedad de flexbox
+podemos cambiar esta disposicion y que Y sea el eje principal y X sea el eje transversal
+*/
+
 .container{
     background-color: #333;
     height: 30vh;
-
 
     /*display flex es una caja flexible qe teabaja en bloque*/
     /*por defecto la direccion de ua caja flexbox es horizontal es decir en fila*/
@@ -20,12 +29,38 @@
     /*flex-wrap: el contenedor intentara alinear a tods sus hijos en una sola linea*/
     flex-wrap: wrap;
     /*short-cut*/
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
+
+    /* propiedades para alinear y distribuir los elementos
+    justify-content define la alineacion en el eje principal que no necesariamente es x.
+    El eje principal (main-axis) y el eje transversal lo determina flex-direction
+     */
+    
+     /*
+    flex-start : default value aplica un flow left
+    center : alinea al centro
+    flex-end : aplica un flow right
+    space-between : ignora las orillas de la caja contenedora y el espacio que sobre lo reparte entre los elementos internos
+    space-arround : considera las orillas
+    space-evenly : es un complemento entre space-between y spac around
+    */
+    justify-content: flex-start;
+
+    /*Alineando en el eje transversal o eje sobrante
+    stretch : valor por defecto, lo hijo en una caja flexbox en el eje transversal se van a estirar al tamano del 
+    contenedor padre
+    */
+    align-items: baseline;
+
 }
 
 .item{
     background-color: #666;
-    width: 20%;
-    height: 20%;
+/*    width: 20%;
+    height: 20%;*/
     border: thin solid #999;
+}
+
+.item:nth-child(2){
+    font-size: 150%;
 }

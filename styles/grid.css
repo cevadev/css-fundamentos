@@ -1,0 +1,127 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+a[href="#top"] {
+    margin: 1rem;
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+h2 {
+    margin-top: 50vh;
+    text-align: center;
+}
+
+img {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.menu {
+    margin-bottom: 100vh;
+    font-size: 125%;
+}
+
+.menu li {
+    margin-bottom: 1rem;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    height: 80vh;
+    background-color: #222;
+    border: medium solid #000;
+}
+
+.item {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #666;
+    border: medium solid #999;
+}
+
+.grid-explicit{
+    display: grid;
+    /* Grid de 3c x 3r*/
+    /*1era fila: 50% del contenedor | 2da file: 100px | 3era fila: 1 fraccion*/
+    grid-template-columns: 50% 100px 1fr;
+    /*1era columna: 36px | 2da columna: 20% de la altura del viewport | 3era columna: 30% del contenedor*/
+    grid-template-rows: 2rem 20vh 30%;
+
+    /* Grid de 5c X 4r */
+    /* usamos repeat para definir columnas o fils del mismo tmanio */
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+    /* Grid de 4c X 5r */
+    grid-template-columns: 20% repeat(2,30%) 20%;
+    grid-template-rows: repeat(4, auto);
+
+    /* Grid-gap primer valor aplica a rows y segundo valor aplica a columns, esta son propiedades
+       deprecidas ahora se debe usar column-gap y row-gap */
+    grid-gap: .5rem 0;
+
+    row-gap: 0.3rem;
+    column-gap: 0;
+
+    /* podemos usar el shorthand para aplicar gap a columnas y filas*/
+    gap: .2rem 0;
+}
+
+/* Posicionamiento con Grd Line: accedemos a la celda 10 */
+.grid-explicit .item:nth-child(10){
+    color: turquoise;
+    text-align: center;
+    /* posicionamos el item 10 entre la fila 2 y fila 3, columna 2 y columan 3*/
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    /*shorthand: columan 3 a las columna 4 y de la fila 2 a la fla 3*/
+    grid-row: 2/3;
+    grid-column: 3/4;
+
+    /* hacemos que item 10 ocupe dos posiciones hacia la derecha */
+    grid-row: 2/3;
+    grid-column: 3/5;
+
+    /* equivalente en shorthand */
+    grid-area: 2/3 / 3/5;
+}
+
+/* span: permite que un item abarque un numero de filas y columnas */
+.grid-explicit .item:nth-child(16){
+    /*de la posicion 16, abarcamos 2 filas, y en columnas 3*/
+    grid-row: span 2;
+    grid-column: span 3;
+}
+
+/* movemos el item 15, a la linea de la fila 1 y abarcamos hasta la linea 3 y de la linea de la columna 1 hasta 2*/
+.grid-explicit .item:nth-child(15){
+    color: magenta;
+    grid-row: 1 / span 3;
+    grid-column: span 2;
+}
