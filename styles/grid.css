@@ -54,7 +54,7 @@ img {
 
 .item {
     padding: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.10rem;
     background-color: #666;
     border: medium solid #999;
 }
@@ -176,4 +176,56 @@ img {
 
 .footer{
     grid-area: footer;
+}
+
+/* Grid implicit */
+.grid-implicit{
+    /* Definimos una Grid implicita de 4c x 3r*/
+    display: grid;
+    /* por defecto flexbox y grid aplican su modelo en bloque, pero al usar inline-grid aplicamos
+       el modelo grid pero inline, en esta propiedad ya no podemos aplicar margenes laterales
+       a sus elementos. Si tenemos varios grid y queremos que se muestren uno al lado del otro
+       podemos usar la colocacion de elementos inline.*/
+    display: inline-grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+}
+
+.grid-flow{
+    display: grid;
+    /* grid 5c x 4r*/
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 150px);
+    /*determinamos el flujo que seguira la grid*/
+    /*grid-auto-flow: su valores son: 
+      row: valor por defecto*/
+    grid-auto-flow: row;
+    /*grid-auto-rows: nos permite indicar un tamanio para las rows que se generen implicitamente*/
+    grid-auto-rows: 10px;
+    grid-auto-flow: column;
+    grid-auto-columns: 100px;
+}
+
+.grid-flow-dense{
+    display: grid;
+    /*Grid de 5c x 4r*/
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    /*cuando en el grid queden espacios vacios por el acomodo explicito a ciertos elementos, si hay espacio
+      suficiente para re-acomodarse, lo van a hacer. Dense permite que el espacio de una grid sea aprovechado*/
+    grid-auto-flow: row dense;
+    grid-auto-flow: column dense;
+}
+
+/*el elemento 9 ocupara 3 celdas de columnas y 3 celdas de filas a partir de donde esta*/
+/*.grid-flow-dense .item:nth-child(9){
+    color: cyan;
+    grid-row: span 3;
+    grid-column: span 3;
+}*/
+
+.grid-flow-dense .item:nth-child(11) {
+    color: cyan;
+    grid-row: span 3;
+    grid-column: span 3;
 }
