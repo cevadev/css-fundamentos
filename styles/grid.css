@@ -1,220 +1,220 @@
 html {
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: sans-serif;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 a[href="#top"] {
-    margin: 1rem;
-    display: block;
-    font-size: 2rem;
-    text-align: center;
-    text-decoration: none;
+  margin: 1rem;
+  display: block;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 h2 {
-    margin-top: 50vh;
-    text-align: center;
+  margin-top: 50vh;
+  text-align: center;
 }
 
 img {
-    margin: auto;
-    display: block;
-    max-width: 100%;
-    height: auto;
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .menu {
-    margin-bottom: 100vh;
-    font-size: 125%;
+  margin-bottom: 100vh;
+  font-size: 125%;
 }
 
 .menu li {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .container {
-    margin: 0 auto;
-    width: 80%;
-    height: 80vh;
-    background-color: #222;
-    border: medium solid #000;
+  margin: 0 auto;
+  width: 80%;
+  height: 80vh;
+  background-color: #222;
+  border: medium solid #000;
 }
 
 .item {
-    padding: 1rem;
-    font-size: 1.10rem;
-    background-color: #666;
-    border: medium solid #999;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background-color: #666;
+  border: medium solid #999;
 }
 
-.grid-explicit{
-    display: grid;
-    /* Grid de 3c x 3r*/
-    /*1era fila: 50% del contenedor | 2da file: 100px | 3era fila: 1 fraccion*/
-    grid-template-columns: 50% 100px 1fr;
-    /*1era columna: 36px | 2da columna: 20% de la altura del viewport | 3era columna: 30% del contenedor*/
-    grid-template-rows: 2rem 20vh 30%;
+.grid-explicit {
+  display: grid;
+  /* Grid de 3c x 3r*/
+  /*1era fila: 50% del contenedor | 2da file: 100px | 3era fila: 1 fraccion*/
+  grid-template-columns: 50% 100px 1fr;
+  /*1era columna: 36px | 2da columna: 20% de la altura del viewport | 3era columna: 30% del contenedor*/
+  grid-template-rows: 2rem 20vh 30%;
 
-    /* Grid de 5c X 4r */
-    /* usamos repeat para definir columnas o fils del mismo tmanio */
-    grid-template-columns: repeat(5, 20%);
-    grid-template-rows: repeat(4, auto);
+  /* Grid de 5c X 4r */
+  /* usamos repeat para definir columnas o fils del mismo tmanio */
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(4, auto);
 
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 
-    /* Grid de 4c X 5r */
-    grid-template-columns: 20% repeat(2,30%) 20%;
-    grid-template-rows: repeat(4, auto);
+  /* Grid de 4c X 5r */
+  grid-template-columns: 20% repeat(2, 30%) 20%;
+  grid-template-rows: repeat(4, auto);
 
-    /* Grid-gap primer valor aplica a rows y segundo valor aplica a columns, esta son propiedades
+  /* Grid-gap primer valor aplica a rows y segundo valor aplica a columns, esta son propiedades
        deprecidas ahora se debe usar column-gap y row-gap */
-    grid-gap: .5rem 0;
+  grid-gap: 0.5rem 0;
 
-    row-gap: 0.3rem;
-    column-gap: 0;
+  row-gap: 0.3rem;
+  column-gap: 0;
 
-    /* podemos usar el shorthand para aplicar gap a columnas y filas*/
-    gap: .2rem 0;
+  /* podemos usar el shorthand para aplicar gap a columnas y filas*/
+  gap: 0.2rem 0;
 }
 
 /* Posicionamiento con Grd Line: accedemos a la celda 10 */
-.grid-explicit .item:nth-child(10){
-    color: turquoise;
-    text-align: center;
-    /* posicionamos el item 10 entre la fila 2 y fila 3, columna 2 y columan 3*/
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
+.grid-explicit .item:nth-child(10) {
+  color: turquoise;
+  text-align: center;
+  /* posicionamos el item 10 entre la fila 2 y fila 3, columna 2 y columan 3*/
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
 
-    /*shorthand: columan 3 a las columna 4 y de la fila 2 a la fla 3*/
-    grid-row: 2/3;
-    grid-column: 3/4;
+  /*shorthand: columan 3 a las columna 4 y de la fila 2 a la fla 3*/
+  grid-row: 2/3;
+  grid-column: 3/4;
 
-    /* hacemos que item 10 ocupe dos posiciones hacia la derecha */
-    grid-row: 2/3;
-    grid-column: 3/5;
+  /* hacemos que item 10 ocupe dos posiciones hacia la derecha */
+  grid-row: 2/3;
+  grid-column: 3/5;
 
-    /* equivalente en shorthand */
-    grid-area: 2/3 / 3/5;
+  /* equivalente en shorthand */
+  grid-area: 2/3 / 3/5;
 }
 
 /* span: permite que un item abarque un numero de filas y columnas */
-.grid-explicit .item:nth-child(16){
-    /*de la posicion 16, abarcamos 2 filas, y en columnas 3*/
-    grid-row: span 2;
-    grid-column: span 3;
+.grid-explicit .item:nth-child(16) {
+  /*de la posicion 16, abarcamos 2 filas, y en columnas 3*/
+  grid-row: span 2;
+  grid-column: span 3;
 }
 
 /* movemos el item 15, a la linea de la fila 1 y abarcamos hasta la linea 3 y de la linea de la columna 1 hasta 2*/
-.grid-explicit .item:nth-child(15){
-    color: magenta;
-    grid-row: 1 / span 3;
-    grid-column: span 2;
+.grid-explicit .item:nth-child(15) {
+  color: magenta;
+  grid-row: 1 / span 3;
+  grid-column: span 2;
 }
 
 /* Aplicando nombres a las lineas del Grid */
-.grid-line-names{
-    display: grid;
-    /* Grid 3c x 3r*/
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+.grid-line-names {
+  display: grid;
+  /* Grid 3c x 3r*/
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 
-    /* al tener una grid de 3x3 tenemos 4 lineas rows y 4 lineas column. Para
+  /* al tener una grid de 3x3 tenemos 4 lineas rows y 4 lineas column. Para
        nombrar a las lineas, colocamos un []*/
-    grid-template-columns: [linea-c1]1fr [linea-c2]1fr [linea-c3]1fr [linea-c4]1fr;
-    grid-template-rows: [linea-r1]1fr [linea-r2]1fr [linea-r3]1fr [linea-r4]1fr;
+  grid-template-columns: [linea-c1]1fr [linea-c2]1fr [linea-c3]1fr [linea-c4]1fr;
+  grid-template-rows: [linea-r1]1fr [linea-r2]1fr [linea-r3]1fr [linea-r4]1fr;
 }
 
-.grid-line-names .item:nth-child(3){
-    color: magenta;
-    /* item3, se va a posicionar en el item7 y ocupara 3 columnas */
-    grid-row: linea-r3/linea-r4;
-    grid-column: linea-c1/linea-c4;
+.grid-line-names .item:nth-child(3) {
+  color: magenta;
+  /* item3, se va a posicionar en el item7 y ocupara 3 columnas */
+  grid-row: linea-r3/linea-r4;
+  grid-column: linea-c1/linea-c4;
 }
 
 /* posicionamiento con grid areas */
-.grid-areas{
-    display: grid;
-    /* Grid 2c x 3r*/
-    grid-template-columns: 1fr 200px;
-    grid-template-rows: 100px repeat(2, 1fr) 50px;
+.grid-areas {
+  display: grid;
+  /* Grid 2c x 3r*/
+  grid-template-columns: 1fr 200px;
+  grid-template-rows: 100px repeat(2, 1fr) 50px;
 
-    grid-template-areas: 
+  grid-template-areas: 
     /* el . en grid define a la celda como vacia*/
-        "header header"
-        "content sidebar"
-        "content ."
-        "footer footer";
+    "header header"
+    "content sidebar"
+    "content ."
+    "footer footer";
 }
 
 /* como cada elemento tienen una clase enlazamos la clase con los nombres del grid-template-areas*/
-.header{
-    grid-area: header;
+.header {
+  grid-area: header;
 }
 
-.content{
-    grid-area: content;
+.content {
+  grid-area: content;
 }
 
-.sidebar{
-    grid-area: sidebar;
+.sidebar {
+  grid-area: sidebar;
 }
 
-.footer{
-    grid-area: footer;
+.footer {
+  grid-area: footer;
 }
 
 /* Grid implicit */
-.grid-implicit{
-    /* Definimos una Grid implicita de 4c x 3r*/
-    display: grid;
-    /* por defecto flexbox y grid aplican su modelo en bloque, pero al usar inline-grid aplicamos
+.grid-implicit {
+  /* Definimos una Grid implicita de 4c x 3r*/
+  display: grid;
+  /* por defecto flexbox y grid aplican su modelo en bloque, pero al usar inline-grid aplicamos
        el modelo grid pero inline, en esta propiedad ya no podemos aplicar margenes laterales
        a sus elementos. Si tenemos varios grid y queremos que se muestren uno al lado del otro
        podemos usar la colocacion de elementos inline.*/
-    display: inline-grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 200px);
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px);
 }
 
-.grid-flow{
-    display: grid;
-    /* grid 5c x 4r*/
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 150px);
-    /*determinamos el flujo que seguira la grid*/
-    /*grid-auto-flow: su valores son: 
+.grid-flow {
+  display: grid;
+  /* grid 5c x 4r*/
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 150px);
+  /*determinamos el flujo que seguira la grid*/
+  /*grid-auto-flow: su valores son: 
       row: valor por defecto*/
-    grid-auto-flow: row;
-    /*grid-auto-rows: nos permite indicar un tamanio para las rows que se generen implicitamente*/
-    grid-auto-rows: 10px;
-    grid-auto-flow: column;
-    grid-auto-columns: 100px;
+  grid-auto-flow: row;
+  /*grid-auto-rows: nos permite indicar un tamanio para las rows que se generen implicitamente*/
+  grid-auto-rows: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
 }
 
-.grid-flow-dense{
-    display: grid;
-    /*Grid de 5c x 4r*/
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 200px);
-    /*cuando en el grid queden espacios vacios por el acomodo explicito a ciertos elementos, si hay espacio
+.grid-flow-dense {
+  display: grid;
+  /*Grid de 5c x 4r*/
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 200px);
+  /*cuando en el grid queden espacios vacios por el acomodo explicito a ciertos elementos, si hay espacio
       suficiente para re-acomodarse, lo van a hacer. Dense permite que el espacio de una grid sea aprovechado*/
-    grid-auto-flow: row dense;
-    grid-auto-flow: column dense;
+  grid-auto-flow: row dense;
+  grid-auto-flow: column dense;
 }
 
 /*el elemento 9 ocupara 3 celdas de columnas y 3 celdas de filas a partir de donde esta*/
@@ -225,7 +225,46 @@ img {
 }*/
 
 .grid-flow-dense .item:nth-child(11) {
-    color: cyan;
-    grid-row: span 3;
-    grid-column: span 3;
+  color: cyan;
+  grid-row: span 3;
+  grid-column: span 3;
+}
+
+/* Grid Layer - Celdas en Capas (Superposicionamiento) */
+.grid-layers {
+  display: grid;
+  /*Grid de 4c x 4r*/
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.grid-layers .item:nth-child(1) {
+  background-color: #dbea33;
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.grid-layers .item:nth-child(2) {
+  background-color: #497af8;
+  grid-column: 3/5;
+  grid-row: 1/3;
+}
+
+.grid-layers .item:nth-child(3) {
+  background-color: #90e971;
+  grid-column: 1/3;
+  grid-row: 3/5;
+}
+
+.grid-layers .item:nth-child(4) {
+  background-color: #f0952a;
+  grid-column: 3/5;
+  grid-row: 3/5;
+}
+
+.grid-layers .item:nth-child(5) {
+  background-color: #c92af0;
+  grid-column: 2/4;
+  grid-row: 2/4;
+  opacity: 75%;
 }
