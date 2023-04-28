@@ -268,3 +268,49 @@ img {
   grid-row: 2/4;
   opacity: 75%;
 }
+
+/* Cambiando el ordenamiento de Grid Items. El ordenamiento aplica cuando
+   hacemos que los elementos se vayan acomodando en base al flujo de la grid*/
+.grid-order {
+  display: grid;
+  /*Grid de 3c x 2r*/
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.grid-order .item:nth-child(1) {
+  /*default 0, valores negativos y positivos*/
+  order: 1;
+}
+.grid-order .item:nth-child(2) {
+  order: 2;
+}
+
+.grid-order .item:nth-child(5) {
+  order: -1;
+}
+
+/* Alineamiento de los elementos hijos (celdas, tracks, rows, columns)*/
+.grid-align {
+  display: grid;
+  /*Grid de 3c x 2r*/
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(200px);
+  justify-items: stretch;
+  /*justify-items trabaja el alineamiento de los elementos items sobre el eje X (horizontal)*/
+  justify-items: center;
+  justify-items: end;
+  /*align-items trabaja el alineamiento de los elementos items sobre el eje Y (vertical)*/
+  align-items: stretch;
+  /*ocupa el espacio de su contenido*/
+  align-items: start;
+  align-items: end;
+  /*el item se centran tanto en X  como en Y*/
+  align-items: center;
+}
+/*alineando de manera especial un solo elemento hijo 4 dentro de su grid item*/
+.grid-align .item:nth-child(4) {
+  justify-self: start;
+  align-self: start;
+}
+
+/* Alineamiento de Grid Tracks */
