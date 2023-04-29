@@ -314,3 +314,40 @@ img {
 }
 
 /* Alineamiento de Grid Tracks */
+.grid-align-tracks {
+  display: grid;
+  /*Grid de 3c x 2r*/
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(200px);
+  /*justify-content: se usa para la alineacion de los tracks del grid en el eje X (horizontal)*/
+  justify-content: start;
+  justify-content: end;
+  justify-content: center;
+  justify-content: space-between;
+  justify-content: space-evenly;
+  /*align-content: se usa para la alineacion de los tracks de la grid en el eje Y (vertical) */
+  align-content: start;
+  align-content: end;
+  align-content: center;
+}
+
+/* Tamanios maximos y minimos para los Grid Tracks */
+.grid-min-max {
+  display: grid;
+  /*Grid de 4c x ?*/
+  /*Grid css respeta el numero explicitamente indicado de columnas y dinamicamente
+    implicitamente va a generar las filas dependiendo de los elementos item del grid*/
+  grid-template-columns: repeat(4, 1fr);
+  /*minmax nos permite definir el tamanio de un elementos. el primer valor es el tamanio
+    minimo del elemento y despues el tamanio maximo*/
+  grid-template-columns: repeat(4, minmax(100px, 200px));
+  /*min-content: indicamos que el tamanio minimo sea igual al minimo de contenido que tenga
+    las columnas*/
+  grid-template-columns: repeat(4, minmax(min-content, 200px));
+  grid-template-columns: repeat(4, minmax(100px, min-content));
+  /*como tamanio minimo 100px y como tamanio maximo el maximo contenido*/
+  grid-template-columns: repeat(4, minmax(100px, max-content));
+  /*aplicamos el maximo contenido en el valor min*/
+  grid-template-columns: repeat(4, minmax(max-content, 200px));
+  grid-template-columns: repeat(4, minmax(min-content, max-content));
+}
