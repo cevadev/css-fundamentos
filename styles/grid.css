@@ -59,6 +59,12 @@ img {
   border: medium solid #999;
 }
 
+.sub-Item {
+  padding: 1rem;
+  background-color: #ddd;
+  border: medium solid #ccc;
+}
+
 .grid-explicit {
   display: grid;
   /* Grid de 3c x 3r*/
@@ -374,4 +380,21 @@ img {
   grid-template-columns: repeat(auto-fit, 100px);
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+/* construyendo una grid responsiva */
+.grid-responsive {
+  display: grid;
+  /*auto-fit se van a repetir tantas columnas como se necesiten*/
+  /*min-max  el tamanio minimo que va a tener cada item de la grid van a ser 200px
+    y el tamanio maximo lo que quepa*/
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1vw;
+}
+
+/* Grid aninadas */
+.grid-nested {
+  display: grid;
+  /*Grid 3c x ?r*/
+  grid-template-columns: repeat(3, 1fr);
 }
