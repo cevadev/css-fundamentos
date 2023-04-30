@@ -351,3 +351,27 @@ img {
   grid-template-columns: repeat(4, minmax(max-content, 200px));
   grid-template-columns: repeat(4, minmax(min-content, max-content));
 }
+
+.grid-repeat {
+  display: grid;
+  /* Grid 4c x ?*/
+  /*el patron se repote 4 veces*/
+  grid-template-columns: repeat(4, 10% 20% 30% 40%);
+  grid-template-columns: repeat(3, 10% 20% 30% 40%);
+  grid-template-columns: repeat(2, 10% 20% 30% 40%);
+  grid-template-columns: repeat(1, 10% 20% 30% 40%);
+  grid-template-columns: repeat(2, 100px 200px);
+}
+
+/*grid dinamicas*/
+.grid-dynamics {
+  display: grid;
+  /*Grid de 4c x ?r*/
+  grid-template-columns: repeat(4, 100px);
+  /*auto-fill rellena la grid con tracks generados dinamicamente */
+  grid-template-columns: repeat(auto-fill, 100px);
+  /*auto-fit ajusta la grid con los tracks existentes*/
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
