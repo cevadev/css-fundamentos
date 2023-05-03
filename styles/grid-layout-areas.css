@@ -1,0 +1,87 @@
+/* Reseteo */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/* Mobile First */
+body {
+  margin: 0;
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    /* necesitamos 5 filas */
+    "header   header   header     header     header     header"
+    "nav      nav      nav        nav        nav        nav"
+    "uc-left  uc-left  uc-center  uc-center  uc-right   uc-right"
+    "middle   middle   middle     lower      lower      lower"
+    "footer   footer   footer     footer     footer     footer";
+}
+
+/* aplicamos stilos a todos los hijos directos del body */
+body > * {
+  background-color: #666;
+  border: medium solid #222;
+}
+
+h2 {
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.uc-left {
+  grid-area: uc-left;
+}
+
+.uc-center {
+  grid-area: uc-center;
+}
+
+.uc-right {
+  grid-area: uc-right;
+}
+
+.middle {
+  grid-area: middle;
+}
+
+.lower {
+  grid-area: lower;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* version desktop */
+@media screen and (min-width: 1024px) {
+  /*para la version desktop la grid sera de 5columns x 5rows*/
+  body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "header   header   header     header     header"
+      "nav      uc-left  uc-center  uc-center  uc-right"
+      "nav      middle   middle     middle     middle"
+      "nav      lower    lower      lower      lower"
+      "footer   footer   footer     footer     footer";
+  }
+}
